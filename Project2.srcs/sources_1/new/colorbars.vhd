@@ -36,9 +36,10 @@ begin
 
                            --Sky
 ---------------------------------------------------------------------------		
- Blue <= "1111" when --(vcount < 80 and blank='0')
-               --or (vcount >= 80 and vcount < 280 and blank='0')
-                ((vcount < 30) and (vcount >= 200) and (hcount < 440) and (hcount >= 610) and blank='0')
+ Blue <= "1111" when (vcount < 30 and blank='0')
+               or (vcount >= 30  and vcount < 280 and hcount < 440 and blank='0')
+               or (vcount > 200 and vcount < 280 and blank='0')
+               or (hcount > 610 and vcount < 280 and blank='0')
                else "0000"; --sun
                         
                            --Ground

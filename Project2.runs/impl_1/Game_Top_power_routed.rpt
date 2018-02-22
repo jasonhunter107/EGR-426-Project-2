@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date             : Wed Feb 21 22:41:04 2018
+| Date             : Wed Feb 21 23:12:49 2018
 | Host             : 25thBam running 64-bit major release  (build 9200)
 | Command          : report_power -file Game_Top_power_routed.rpt -pb Game_Top_power_summary_routed.pb -rpx Game_Top_power_routed.rpx
 | Design           : Game_Top
@@ -50,11 +50,11 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        5 |       --- |             --- |
-| Slice Logic    |    <0.001 |       90 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       44 |     20800 |            0.21 |
+| Slice Logic    |    <0.001 |       91 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       46 |     20800 |            0.22 |
 |   Register     |    <0.001 |       25 |     41600 |            0.06 |
-|   Others       |     0.000 |        5 |       --- |             --- |
-| Signals        |    <0.001 |       65 |       --- |             --- |
+|   Others       |     0.000 |        4 |       --- |             --- |
+| Signals        |    <0.001 |       68 |       --- |             --- |
 | MMCM           |     0.116 |        1 |         5 |           20.00 |
 | I/O            |    <0.001 |       17 |       106 |           16.04 |
 | Static Power   |     0.072 |          |           |                 |
