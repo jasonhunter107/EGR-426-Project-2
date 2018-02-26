@@ -48,7 +48,7 @@ port(rst,pixel_clk : in std_logic; HS,VS,blank : out std_logic;
      hcount,vcount : out std_logic_vector(10 downto 0));
 end component;
 
-component colorbars is
+component staticBackground is
 Port (hcount,vcount : in STD_LOGIC_VECTOR(10 downto 0); blank : in STD_LOGIC;
       Red,Green,Blue : out STD_LOGIC_VECTOR(3 downto 0));
 end component;
@@ -64,7 +64,7 @@ v1 : vga_controller_640_60 PORT MAP (pixel_clk => clk_25MHz, rst => reset, HS =>
                                      VS => VSYNC, blank => blank, hcount => hcount, 
                                      vcount => vcount);
 
-b1 : colorbars PORT MAP (hcount => hcount, vcount => vcount, blank => blank,
+s1 : staticBackground PORT MAP (hcount => hcount, vcount => vcount, blank => blank,
                          Red => RED, Green => GREEN, Blue => BLUE);
 
 end Behavioral;

@@ -688,7 +688,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Feb 22 03:28:38 UTC 2018</spirit:value>
+            <spirit:value>Thu Feb 22 21:00:39 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
