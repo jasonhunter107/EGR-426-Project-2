@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Thu Feb 22 16:29:10 2018
-| Host         : DESKTOP-IHS8QFI running 64-bit major release  (build 9200)
+| Date         : Mon Feb 26 02:34:52 2018
+| Host         : 25thBam running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Game_Top_control_sets_placed.rpt
 | Design       : Game_Top
 | Device       : xc7a35t
@@ -35,7 +35,7 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |               1 |            1 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              13 |            6 |
+| No           | Yes                   | No                     |              13 |            5 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |              11 |            4 |
@@ -51,7 +51,7 @@ Table of Contents
 |  c1/inst/clk_out1 |               |                         |                1 |              1 |
 |  c1/inst/clk_out1 |               | v1/HS0                  |                1 |              1 |
 |  c1/inst/clk_out1 |               | v1/VS0                  |                1 |              1 |
-|  c1/inst/clk_out1 |               | v1/hcounter[10]_i_1_n_0 |                4 |             11 |
+|  c1/inst/clk_out1 |               | v1/hcounter[10]_i_1_n_0 |                3 |             11 |
 |  c1/inst/clk_out1 | v1/eqOp       | v1/vcounter[10]_i_1_n_0 |                4 |             11 |
 +-------------------+---------------+-------------------------+------------------+----------------+
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1519334661">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1519630417">
   <File Type="RDS-PROPCONSTRS" Name="Game_Top_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="Game_Top.tcl"/>
   <File Type="RDS-RDS" Name="Game_Top.vds"/>
