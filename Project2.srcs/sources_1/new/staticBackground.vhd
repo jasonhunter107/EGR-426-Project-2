@@ -22,6 +22,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;       -- For unsigned()
 
 
 entity staticBackground is
@@ -36,55 +37,40 @@ signal tempV, tempH : STD_LOGIC_VECTOR(10 downto 0);
 
 begin
 
+tempV <= vcount;
+tempH <= hcount;
 
 --(vcount >= 150) and (vcount < 250) and (hcount >= 310) and (hcount < 410) and blank='0'
 
-                           --Sky
----------------------------------------------------------------------------		
-            Blue <= "0000"; 
- 
---               when (vcount < 30 and blank='0')
---               or (vcount >= 30  and vcount < 280 and hcount < 440 and blank='0')
---               or (vcount > 200 and vcount < 280 and blank='0')
---               or (hcount > 610 and vcount < 280 and blank='0')
---               else "0000"; --sun
-                        
-                           --Ground
----------------------------------------------------------------------------				    
+Blue <= "0000"; 
+                        		    
 
 Red <= "0100"   when (vcount >= 300 and vcount < 560 and blank='0') --dirt
-                else "1111" when ((vcount >= 30) and (vcount < 200) and (hcount >= 440) and (hcount < 610) and blank='0') --sun    
-             --  when ((vcount*115 - vcount*vcount + hcount*525 - hcount*hcount) > 152775)
-                       
-                 or (vcount < 30 and blank='0') --sky
-                 or (vcount >= 30  and vcount < 280 and hcount < 440 and blank='0')
-                 or (vcount > 200 and vcount < 280 and blank='0')
-                 or (hcount > 610 and vcount < 280 and blank='0')
-                 
+
+                else "1111" when  (vcount < 30 and blank='0') --top of sky
+                or (vcount >= 30  and vcount < 280 and hcount <= 640 and blank='0') --sky           
+   
                 else "1100" when (vcount >= 280 and vcount < 300 and blank='0') --grass
                    
                 else "0000";	
                 
 Green <= "0011" when (vcount >= 280 and vcount < 300 and blank='0') --grass
                 else "0010" when (vcount >= 300 and vcount < 560 and blank='0') --dirt
-                else "1111" when((vcount >= 30) and (vcount < 200) and (hcount >= 440) and (hcount < 610) and blank='0') --sun    
-               -- when ((vcount*115 - vcount*vcount + hcount*525 - hcount*hcount) > 152775)
                 
-                else "0111" when (vcount < 30 and blank='0') --sky
-                or (vcount >= 30  and vcount < 280 and hcount < 440 and blank='0')
-                or (vcount > 200 and vcount < 280 and blank='0')
-                or (hcount > 610 and vcount < 280 and blank='0')
+                else "1111"
+                when ((vcount >= 30) and (vcount < 54) and (hcount >= 470) and (hcount < 580) and blank='0') --sun 
+                or ((vcount >= 54) and (vcount < 78) and (hcount >= 460) and (hcount < 590) and blank='0') --sun 
+                or ((vcount >= 78) and (vcount < 102) and (hcount >= 450) and (hcount < 600) and blank='0') --sun 
+                or ((vcount >= 102) and (vcount < 126) and (hcount >= 440) and (hcount < 610) and blank='0') --sun 
+                or ((vcount >= 126) and (vcount < 150) and (hcount >= 450) and (hcount < 600) and blank='0') --sun 
+                or ((vcount >= 150) and (vcount < 174) and (hcount >= 460) and (hcount < 590) and blank='0') --sun 
+                or ((vcount >= 174) and (vcount < 198) and (hcount >= 470) and (hcount < 580) and blank='0') --sun 
+                
+                else "0111"
+                when  (vcount < 30 and blank='0') --top of sky
+                or (vcount >= 30  and vcount < 280 and hcount <= 640 and blank='0') --sky
+                
                 
                 else "0000";			
-
--- Red <= "1111"  when (vcount < 80 and blank='0') 
---				or (vcount >=160 and vcount < 240 and blank='0')
---				or (vcount >= 320 and vcount < 400 and blank='0')
---				or (vcount >= 480 and vcount < 560 and blank='0') 
---				else "0000";
-
--- Green <= "1111" when (vcount >= 80 and vcount < 240 and blank='0')
---				 or (vcount >= 400 and vcount < 560 and blank='0') 
---				 else "0000";
 				 
 end Behavioral;

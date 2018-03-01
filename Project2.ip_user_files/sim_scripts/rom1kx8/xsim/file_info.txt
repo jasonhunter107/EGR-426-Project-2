@@ -1,0 +1,1 @@
+rom1kx8_sim_netlist.vhdl,vhdl,xil_defaultlib,../../../../Project2.srcs/sources_1/ip/rom1kx8/rom1kx8_sim_netlist.vhdl,
