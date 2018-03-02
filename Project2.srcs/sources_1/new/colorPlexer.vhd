@@ -44,10 +44,26 @@ entity colorPlexer is
 end colorPlexer;
 
 architecture Behavioral of colorPlexer is
-
-
-
 begin
+
+--Red <= Red_bgnd or Red_char;
+ Red(3) <= Red_bgnd(3) or Red_char(3);
+ Red(2) <= Red_bgnd(2) or Red_char(2);
+ Red(1) <= Red_bgnd(1) or Red_char(1);
+ Red(0) <= Red_bgnd(0) or Red_char(0);
+ 
+ --Green <= Green_bgnd or Green_char;
+ Green(3) <= Green_bgnd(3) or Green_char(3);
+ Green(2) <= Green_bgnd(2) or Green_char(2);
+ Green(1) <= Green_bgnd(1) or Green_char(1);
+ Green(0) <= Green_bgnd(0) or Green_char(0);
+ 
+ --Blue <= Blue_bgnd or Blue_char;
+ Blue(3) <= Blue_bgnd(3) or Blue_char(3);
+ Blue(2) <= Blue_bgnd(2) or Blue_char(2);
+ Blue(1) <= Blue_bgnd(1) or Blue_char(1);
+ Blue(0) <= Blue_bgnd(0) or Blue_char(0);
+
 
 
 end Behavioral;

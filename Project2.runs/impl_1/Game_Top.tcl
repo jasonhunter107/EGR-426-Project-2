@@ -53,17 +53,17 @@ set rc [catch {
   create_project -in_memory -part xc7a35tcpg236-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir {C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.cache/wt} [current_project]
-  set_property parent.project_path {C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.xpr} [current_project]
-  set_property ip_output_repo {{C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.cache/ip}} [current_project]
+  set_property webtalk.parent_dir C:/Users/Jason/Documents/EGR426/Projects/EGR-426-Project-2/Project2.cache/wt [current_project]
+  set_property parent.project_path C:/Users/Jason/Documents/EGR426/Projects/EGR-426-Project-2/Project2.xpr [current_project]
+  set_property ip_output_repo C:/Users/Jason/Documents/EGR426/Projects/EGR-426-Project-2/Project2.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet {{C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/Game_Top.dcp}}
-  read_ip -quiet {{C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}
-  set_property is_locked true [get_files {{C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}]
-  read_ip -quiet {{C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/ip/rom1kx8/rom1kx8.xci}}
-  set_property is_locked true [get_files {{C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/ip/rom1kx8/rom1kx8.xci}}]
-  read_xdc {{C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/constrs_1/new/vgatop_pins.xdc}}
+  add_files -quiet C:/Users/Jason/Documents/EGR426/Projects/EGR-426-Project-2/Project2.runs/synth_1/Game_Top.dcp
+  read_ip -quiet C:/Users/Jason/Documents/EGR426/Projects/EGR-426-Project-2/Project2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+  set_property is_locked true [get_files C:/Users/Jason/Documents/EGR426/Projects/EGR-426-Project-2/Project2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+  read_ip -quiet C:/Users/Jason/Documents/EGR426/Projects/EGR-426-Project-2/Project2.srcs/sources_1/ip/rom1kx8/rom1kx8.xci
+  set_property is_locked true [get_files C:/Users/Jason/Documents/EGR426/Projects/EGR-426-Project-2/Project2.srcs/sources_1/ip/rom1kx8/rom1kx8.xci]
+  read_xdc C:/Users/Jason/Documents/EGR426/Projects/EGR-426-Project-2/Project2.srcs/constrs_1/new/vgatop_pins.xdc
   link_design -top Game_Top -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]

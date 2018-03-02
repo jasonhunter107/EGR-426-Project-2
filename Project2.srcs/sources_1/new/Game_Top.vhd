@@ -53,15 +53,29 @@ component Char_Gen
            blank : in STD_LOGIC;
            hcount : in STD_LOGIC_VECTOR (10 downto 0);
            vcount : in STD_LOGIC_VECTOR (10 downto 0);
-           ASCII_CHAR : in STD_LOGIC_VECTOR (6 downto 0));
---           Red : out STD_LOGIC_VECTOR (3 downto 0);
---           Green : out STD_LOGIC_VECTOR (3 downto 0);
---           Blue : out STD_LOGIC_VECTOR (3 downto 0));
+           ASCII_CHAR : in STD_LOGIC_VECTOR (6 downto 0);
+           Red : out STD_LOGIC_VECTOR (3 downto 0);
+           Green : out STD_LOGIC_VECTOR (3 downto 0);
+           Blue : out STD_LOGIC_VECTOR (3 downto 0));
+end component;
+
+component colorPlexer
+    Port ( Red_bgnd : in STD_LOGIC_VECTOR (3 downto 0);
+           Green_bgnd : in STD_LOGIC_VECTOR (3 downto 0);
+           Blue_bgnd : in STD_LOGIC_VECTOR (3 downto 0);
+           Red_char : in STD_LOGIC_VECTOR (3 downto 0);
+           Green_char : in STD_LOGIC_VECTOR (3 downto 0);
+           Blue_char : in STD_LOGIC_VECTOR (3 downto 0);
+           Red : out STD_LOGIC_VECTOR (3 downto 0);
+           Green : out STD_LOGIC_VECTOR (3 downto 0);
+           Blue : out STD_LOGIC_VECTOR (3 downto 0));
 end component;
 
 signal clk_25MHz,blank : STD_LOGIC;
 signal hcount,vcount : STD_LOGIC_VECTOR(10 downto 0);
 signal ASCII_CHAR : STD_LOGIC_VECTOR(6 downto 0);
+signal Red_b,Green_b,Blue_b : STD_LOGIC_VECTOR(3 downto 0);
+signal Red_c,Green_c,Blue_c : STD_LOGIC_VECTOR(3 downto 0);
 
                         --Instantiating Components
 -- ---------------------------------------------------------------------
@@ -74,14 +88,13 @@ v1 : vga_controller_640_60 PORT MAP (pixel_clk => clk_25MHz, rst => reset, HS =>
                                      vcount => vcount);
 
 s1 : staticBackground PORT MAP (hcount => hcount, vcount => vcount, blank => blank,
-                         Red => RED, Green => GREEN, Blue => BLUE);
+                         Red => Red_b, Green => Green_b, Blue => Blue_b);
                          
 d1 : char_driver PORT MAP (hcount => hcount, vcount => vcount, ASCII_CHAR => ASCII_CHAR);
 
---m1 : CHAR_GEN PORT MAP (clk25 => clk_25MHz, blank => blank, hcount => hcount, vcount => vcount,
---                        ASCII_CHAR => ASCII_CHAR, Red => RED, Green => GREEN, Blue => BLUE);
-                        
-                        
 m1 : CHAR_GEN PORT MAP (clk25 => clk_25MHz, blank => blank, hcount => hcount, vcount => vcount,
-                       ASCII_CHAR => ASCII_CHAR);
+                        ASCII_CHAR => ASCII_CHAR, Red => Red_c, Green => Green_c, Blue => Blue_c);
+                        
+cp1: colorPlexer port map (Red_bgnd => Red_b ,Green_bgnd => Green_b ,Blue_bgnd => Blue_b, Red_char => Red_c, Green_char => Green_c,
+                                    Blue_char => Blue_c ,Red => RED,Green => GREEN ,Blue => BLUE);                
 end Behavioral;

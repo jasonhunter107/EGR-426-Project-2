@@ -38,10 +38,10 @@ entity Char_Gen is
            blank : in STD_LOGIC;
            hcount : in STD_LOGIC_VECTOR (10 downto 0);
            vcount : in STD_LOGIC_VECTOR (10 downto 0);
-           ASCII_CHAR : in STD_LOGIC_VECTOR (6 downto 0));
---           Red : out STD_LOGIC_VECTOR (3 downto 0);
---           Green : out STD_LOGIC_VECTOR (3 downto 0);
---           Blue : out STD_LOGIC_VECTOR (3 downto 0));
+           ASCII_CHAR : in STD_LOGIC_VECTOR (6 downto 0);
+           Red : out STD_LOGIC_VECTOR (3 downto 0);
+           Green : out STD_LOGIC_VECTOR (3 downto 0);
+           Blue : out STD_LOGIC_VECTOR (3 downto 0));
 end Char_Gen;
 
 architecture Behavioral of Char_Gen is
@@ -79,13 +79,20 @@ ROM_ADDRESS <= ASCII_CHAR & pixel_row;  -- Generating ROM address
    end if;
  end process;
 
---Red <= (others => INTENSITY) when blank='0';
-
---Green <= (others => INTENSITY) when blank='0';
-
---Blue <= (others => INTENSITY) when blank='0';
+ Red(3) <= INTENSITY when blank='0' else '0';
+ Red(2) <= INTENSITY when blank='0' else '0';
+ Red(1) <= INTENSITY when blank='0' else '0';
+ Red(0) <= INTENSITY when blank='0' else '0';
  
-
-
+ Green(3) <= INTENSITY when blank='0' else '0';
+ Green(2) <= INTENSITY when blank='0' else '0';
+ Green(1) <= INTENSITY when blank='0' else '0';
+ Green(0) <= INTENSITY when blank='0' else '0';
+ 
+ Blue(3) <= INTENSITY when blank='0' else '0';
+ Blue(2) <= INTENSITY when blank='0' else '0';
+ Blue(1) <= INTENSITY when blank='0' else '0';
+ Blue(0) <= INTENSITY when blank='0' else '0';
+ 
 
 end Behavioral;

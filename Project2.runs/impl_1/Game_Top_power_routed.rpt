@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date             : Thu Mar  1 01:09:42 2018
-| Host             : 25thBam running 64-bit major release  (build 9200)
+| Date             : Thu Mar  1 18:39:17 2018
+| Host             : DESKTOP-IHS8QFI running 64-bit major release  (build 9200)
 | Command          : report_power -file Game_Top_power_routed.rpt -pb Game_Top_power_summary_routed.pb -rpx Game_Top_power_routed.rpx
 | Design           : Game_Top
 | Device           : xc7a35tcpg236-1
@@ -50,11 +50,13 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        5 |       --- |             --- |
-| Slice Logic    |    <0.001 |      105 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       56 |     20800 |            0.27 |
-|   Register     |    <0.001 |       25 |     41600 |            0.06 |
-|   Others       |     0.000 |        5 |       --- |             --- |
-| Signals        |    <0.001 |       84 |       --- |             --- |
+| Slice Logic    |    <0.001 |      125 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       66 |     20800 |            0.32 |
+|   Register     |    <0.001 |       32 |     41600 |            0.08 |
+|   Others       |     0.000 |        8 |       --- |             --- |
+|   F7/F8 Muxes  |     0.000 |        1 |     32600 |           <0.01 |
+| Signals        |    <0.001 |      103 |       --- |             --- |
+| Block RAM      |     0.000 |      0.5 |        50 |            1.00 |
 | MMCM           |     0.116 |        1 |         5 |           20.00 |
 | I/O            |    <0.001 |       17 |       106 |           16.04 |
 | Static Power   |     0.072 |          |           |                 |
@@ -136,13 +138,21 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+----------+-----------+
-| Name     | Power (W) |
-+----------+-----------+
-| Game_Top |     0.117 |
-|   c1     |     0.116 |
-|     inst |     0.116 |
-|   v1     |    <0.001 |
-+----------+-----------+
++------------------------------------------------+-----------+
+| Name                                           | Power (W) |
++------------------------------------------------+-----------+
+| Game_Top                                       |     0.117 |
+|   c1                                           |     0.116 |
+|     inst                                       |     0.116 |
+|   m1                                           |    <0.001 |
+|     my_rom                                     |    <0.001 |
+|       U0                                       |    <0.001 |
+|         inst_blk_mem_gen                       |    <0.001 |
+|           gnbram.gnativebmg.native_blk_mem_gen |    <0.001 |
+|             valid.cstr                         |    <0.001 |
+|               ramloop[0].ram.r                 |    <0.001 |
+|                 prim_init.ram                  |    <0.001 |
+|   v1                                           |    <0.001 |
++------------------------------------------------+-----------+
 
 
