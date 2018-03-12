@@ -47,7 +47,7 @@ process(hcount) begin
  char_col <= hcount(9 downto 3);  -- Character column in [0,79]
  char_row <= vcount(8 downto 3);  -- Character row in [0,59]
  
-  if(char_row="0000011") then
+  if(char_row="0110010") then --Was 24
      if(char_col="0000011") then
         charOut<="0000000";         -- H 
      elsif(char_col="0000100") then
@@ -79,7 +79,7 @@ process(hcount) begin
       else charOut<="0010100";         -- space
       end if;
         
-    elsif (char_row="0000101") then
+    elsif (char_row="0110100") then --was 40
       if(char_col="0000011") then
         charOut<="0000111";         -- s
      elsif(char_col="0000100") then

@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Thu Mar  1 18:37:25 2018
-| Host         : DESKTOP-IHS8QFI running 64-bit major release  (build 9200)
+| Date         : Sun Mar 11 21:25:42 2018
+| Host         : 25thBam running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Game_Top_control_sets_placed.rpt
 | Design       : Game_Top
 | Device       : xc7a35t
@@ -22,8 +22,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     5 |
-| Unused register locations in slices containing registers |    24 |
+| Number of unique control sets                            |     8 |
+| Unused register locations in slices containing registers |    48 |
 +----------------------------------------------------------+-------+
 
 
@@ -33,34 +33,39 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               8 |            4 |
-| No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              13 |            5 |
-| Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              11 |            6 |
+| No           | No                    | No                     |               9 |            5 |
+| No           | No                    | Yes                    |               2 |            2 |
+| No           | Yes                   | No                     |              12 |            6 |
+| Yes          | No                    | No                     |              20 |            7 |
+| Yes          | No                    | Yes                    |              10 |            3 |
+| Yes          | Yes                   | No                     |              11 |            4 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 3. Detailed Control Set Information
 -----------------------------------
 
-+-------------------+---------------+-------------------------+------------------+----------------+
-|    Clock Signal   | Enable Signal |     Set/Reset Signal    | Slice Load Count | Bel Load Count |
-+-------------------+---------------+-------------------------+------------------+----------------+
-|  c1/inst/clk_out1 |               | v1/HS0                  |                1 |              1 |
-|  c1/inst/clk_out1 |               | v1/VS0                  |                1 |              1 |
-|  c1/inst/clk_out1 |               |                         |                4 |              8 |
-|  c1/inst/clk_out1 |               | v1/hcounter[10]_i_1_n_0 |                3 |             11 |
-|  c1/inst/clk_out1 | v1/eqOp       | v1/vcounter[10]_i_1_n_0 |                6 |             11 |
-+-------------------+---------------+-------------------------+------------------+----------------+
++-------------------+-------------------+-------------------------+------------------+----------------+
+|    Clock Signal   |   Enable Signal   |     Set/Reset Signal    | Slice Load Count | Bel Load Count |
++-------------------+-------------------+-------------------------+------------------+----------------+
+|  c1/inst/clk_out1 |                   | v1/HS0                  |                1 |              1 |
+|  VSYNC_OBUF_BUFG  |                   | reset_IBUF              |                2 |              2 |
+|  c1/inst/clk_out1 |                   |                         |                5 |              9 |
+|  VSYNC_OBUF_BUFG  | h1/Object_X_pos20 |                         |                4 |             10 |
+|  VSYNC_OBUF_BUFG  | h1/Object_X_pos   | reset_IBUF              |                3 |             10 |
+|  VSYNC_OBUF_BUFG  | h1/Object_X_pos30 |                         |                3 |             10 |
+|  c1/inst/clk_out1 |                   | v1/hcounter[10]_i_1_n_0 |                5 |             11 |
+|  c1/inst/clk_out1 | v1/eqOp           | v1/vcounter[10]_i_1_n_0 |                4 |             11 |
++-------------------+-------------------+-------------------------+------------------+----------------+
 
 
 +--------+-----------------------+
 | Fanout | Number of ControlSets |
 +--------+-----------------------+
-| 1      |                     2 |
-| 8      |                     1 |
+| 1      |                     1 |
+| 2      |                     1 |
+| 9      |                     1 |
+| 10     |                     3 |
 | 11     |                     2 |
 +--------+-----------------------+
 

@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="20" Path="C:/Users/Jason/Documents/EGR426/Projects/EGR-426-Project-2/Project2.xpr">
+<Project Version="7" Minor="20" Path="C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="2ce830312515482483cce3f42b8a2706"/>
@@ -66,6 +66,12 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/colorPlexer.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/hurdles.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>

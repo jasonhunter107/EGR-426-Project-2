@@ -59,6 +59,19 @@ component Char_Gen
            Blue : out STD_LOGIC_VECTOR (3 downto 0));
 end component;
 
+--Hurdles
+component hurdles 
+    Port ( reset : in STD_LOGIC;
+           VS : in STD_LOGIC;
+           blank : in STD_LOGIC;
+           hcount : in STD_LOGIC_VECTOR (10 downto 0);
+           vcount : in STD_LOGIC_VECTOR (10 downto 0);
+           Red : out STD_LOGIC_VECTOR (3 downto 0);
+           Green : out STD_LOGIC_VECTOR (3 downto 0);
+           Blue : out STD_LOGIC_VECTOR (3 downto 0));
+end component;
+
+--Color multiplexer
 component colorPlexer
     Port ( Red_bgnd : in STD_LOGIC_VECTOR (3 downto 0);
            Green_bgnd : in STD_LOGIC_VECTOR (3 downto 0);
@@ -66,16 +79,20 @@ component colorPlexer
            Red_char : in STD_LOGIC_VECTOR (3 downto 0);
            Green_char : in STD_LOGIC_VECTOR (3 downto 0);
            Blue_char : in STD_LOGIC_VECTOR (3 downto 0);
+           Red_hurd : in STD_LOGIC_VECTOR (3 downto 0);
+           Green_hurd : in STD_LOGIC_VECTOR (3 downto 0);
+           Blue_hurd : in STD_LOGIC_VECTOR (3 downto 0);
            Red : out STD_LOGIC_VECTOR (3 downto 0);
            Green : out STD_LOGIC_VECTOR (3 downto 0);
            Blue : out STD_LOGIC_VECTOR (3 downto 0));
 end component;
 
-signal clk_25MHz,blank : STD_LOGIC;
+signal clk_25MHz,blank, VSYNC_temp : STD_LOGIC;
 signal hcount,vcount : STD_LOGIC_VECTOR(10 downto 0);
 signal ASCII_CHAR : STD_LOGIC_VECTOR(6 downto 0);
 signal Red_b,Green_b,Blue_b : STD_LOGIC_VECTOR(3 downto 0);
 signal Red_c,Green_c,Blue_c : STD_LOGIC_VECTOR(3 downto 0);
+signal Red_h,Green_h,Blue_h : STD_LOGIC_VECTOR(3 downto 0);
 
                         --Instantiating Components
 -- ---------------------------------------------------------------------
@@ -84,7 +101,7 @@ c1 : clk_wiz_0 PORT MAP (clk_in1 => clk_100MHz, reset => reset, clk_out1 => clk_
                          locked => locked);
 
 v1 : vga_controller_640_60 PORT MAP (pixel_clk => clk_25MHz, rst => reset, HS => HSYNC, 
-                                     VS => VSYNC, blank => blank, hcount => hcount, 
+                                     VS => VSYNC_temp, blank => blank, hcount => hcount, 
                                      vcount => vcount);
 
 s1 : staticBackground PORT MAP (hcount => hcount, vcount => vcount, blank => blank,
@@ -95,6 +112,12 @@ d1 : char_driver PORT MAP (hcount => hcount, vcount => vcount, ASCII_CHAR => ASC
 m1 : CHAR_GEN PORT MAP (clk25 => clk_25MHz, blank => blank, hcount => hcount, vcount => vcount,
                         ASCII_CHAR => ASCII_CHAR, Red => Red_c, Green => Green_c, Blue => Blue_c);
                         
-cp1: colorPlexer port map (Red_bgnd => Red_b ,Green_bgnd => Green_b ,Blue_bgnd => Blue_b, Red_char => Red_c, Green_char => Green_c,
-                                    Blue_char => Blue_c ,Red => RED,Green => GREEN ,Blue => BLUE);                
+cp1: colorPlexer port map (Red_bgnd => Red_b ,Green_bgnd => Green_b ,Blue_bgnd => Blue_b, 
+                                    Red_char => Red_c, Green_char => Green_c, Blue_char => Blue_c, 
+                                    Red_hurd => Red_h, Green_hurd => Green_h, Blue_hurd => Blue_h,
+                                    Red => RED,Green => GREEN ,Blue => BLUE);      
+                                    
+h1: hurdles PORT MAP (reset => reset, VS => VSYNC_temp, blank => blank, hcount => hcount,
+                                                             vcount => vcount, Red => Red_h, Green => Green_h, Blue => Blue_h);
+   VSYNC <= VSYNC_temp;        
 end Behavioral;
