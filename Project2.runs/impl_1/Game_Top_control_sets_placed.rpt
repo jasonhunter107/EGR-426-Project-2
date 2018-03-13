@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Sun Mar 11 21:25:42 2018
+| Date         : Mon Mar 12 22:50:45 2018
 | Host         : 25thBam running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Game_Top_control_sets_placed.rpt
 | Design       : Game_Top
@@ -22,8 +22,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     8 |
-| Unused register locations in slices containing registers |    48 |
+| Number of unique control sets                            |    11 |
+| Unused register locations in slices containing registers |    64 |
 +----------------------------------------------------------+-------+
 
 
@@ -33,40 +33,42 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               9 |            5 |
+| No           | No                    | No                     |              11 |            7 |
 | No           | No                    | Yes                    |               2 |            2 |
-| No           | Yes                   | No                     |              12 |            6 |
-| Yes          | No                    | No                     |              20 |            7 |
-| Yes          | No                    | Yes                    |              10 |            3 |
-| Yes          | Yes                   | No                     |              11 |            4 |
+| No           | Yes                   | No                     |              12 |            5 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              44 |           13 |
+| Yes          | Yes                   | No                     |              11 |            3 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 3. Detailed Control Set Information
 -----------------------------------
 
-+-------------------+-------------------+-------------------------+------------------+----------------+
-|    Clock Signal   |   Enable Signal   |     Set/Reset Signal    | Slice Load Count | Bel Load Count |
-+-------------------+-------------------+-------------------------+------------------+----------------+
-|  c1/inst/clk_out1 |                   | v1/HS0                  |                1 |              1 |
-|  VSYNC_OBUF_BUFG  |                   | reset_IBUF              |                2 |              2 |
-|  c1/inst/clk_out1 |                   |                         |                5 |              9 |
-|  VSYNC_OBUF_BUFG  | h1/Object_X_pos20 |                         |                4 |             10 |
-|  VSYNC_OBUF_BUFG  | h1/Object_X_pos   | reset_IBUF              |                3 |             10 |
-|  VSYNC_OBUF_BUFG  | h1/Object_X_pos30 |                         |                3 |             10 |
-|  c1/inst/clk_out1 |                   | v1/hcounter[10]_i_1_n_0 |                5 |             11 |
-|  c1/inst/clk_out1 | v1/eqOp           | v1/vcounter[10]_i_1_n_0 |                4 |             11 |
-+-------------------+-------------------+-------------------------+------------------+----------------+
++-------------------+------------------------------+-------------------------+------------------+----------------+
+|    Clock Signal   |         Enable Signal        |     Set/Reset Signal    | Slice Load Count | Bel Load Count |
++-------------------+------------------------------+-------------------------+------------------+----------------+
+|  c1/inst/clk_out1 |                              | v1/HS0                  |                1 |              1 |
+|  h1/flag2         |                              |                         |                1 |              1 |
+|  flag3            |                              |                         |                1 |              1 |
+|  VSYNC_OBUF_BUFG  |                              | reset_IBUF              |                2 |              2 |
+|  c1/inst/clk_out1 |                              |                         |                5 |              9 |
+|  c1/inst/clk_out1 |                              | v1/hcounter[10]_i_1_n_0 |                4 |             11 |
+|  c1/inst/clk_out1 | v1/eqOp                      | v1/vcounter[10]_i_1_n_0 |                3 |             11 |
+|  VSYNC_OBUF_BUFG  | h1/Object_X_pos[10]_i_1_n_0  | reset_IBUF              |                3 |             11 |
+|  VSYNC_OBUF_BUFG  | h1/Object_X_pos2[10]_i_1_n_0 | reset_IBUF              |                4 |             11 |
+|  VSYNC_OBUF_BUFG  | h1/flag8_out                 | reset_IBUF              |                3 |             11 |
+|  VSYNC_OBUF_BUFG  | flag3                        | reset_IBUF              |                3 |             11 |
++-------------------+------------------------------+-------------------------+------------------+----------------+
 
 
 +--------+-----------------------+
 | Fanout | Number of ControlSets |
 +--------+-----------------------+
-| 1      |                     1 |
+| 1      |                     3 |
 | 2      |                     1 |
 | 9      |                     1 |
-| 10     |                     3 |
-| 11     |                     2 |
+| 11     |                     6 |
 +--------+-----------------------+
 
 

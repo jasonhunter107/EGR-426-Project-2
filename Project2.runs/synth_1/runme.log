@@ -14,13 +14,13 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t-cpg236'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t-cpg236'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 15164 
+INFO: Helper process launched with PID 17824 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 321.652 ; gain = 82.383
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 321.711 ; gain = 82.367
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Game_Top' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Game_Top.vhd:24]
-INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-6704-25thBam/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'c1' of component 'clk_wiz_0' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Game_Top.vhd:100]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-6704-25thBam/realtime/clk_wiz_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-19048-25thBam/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'c1' of component 'clk_wiz_0' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Game_Top.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-19048-25thBam/realtime/clk_wiz_0_stub.vhdl:15]
 INFO: [Synth 8-3491] module 'vga_controller_640_60' declared at 'C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/vga_controller_640_60.vhd:75' bound to instance 'v1' of component 'vga_controller_640_60' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Game_Top.vhd:103]
 INFO: [Synth 8-638] synthesizing module 'vga_controller_640_60' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/vga_controller_640_60.vhd:88]
 INFO: [Synth 8-256] done synthesizing module 'vga_controller_640_60' (1#1) [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/vga_controller_640_60.vhd:88]
@@ -40,8 +40,8 @@ INFO: [Synth 8-638] synthesizing module 'Char_Gen' [C:/Users/Jason/Desktop/EGR 4
 WARNING: [Synth 8-5640] Port 'ena' is missing in component declaration [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Char_Gen.vhd:56]
 WARNING: [Synth 8-5640] Port 'wea' is missing in component declaration [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Char_Gen.vhd:56]
 WARNING: [Synth 8-5640] Port 'dina' is missing in component declaration [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Char_Gen.vhd:56]
-INFO: [Synth 8-3491] module 'rom1kx8' declared at 'C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-6704-25thBam/realtime/rom1kx8_stub.vhdl:5' bound to instance 'my_rom' of component 'rom1kx8' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Char_Gen.vhd:65]
-INFO: [Synth 8-638] synthesizing module 'rom1kx8' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-6704-25thBam/realtime/rom1kx8_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'rom1kx8' declared at 'C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-19048-25thBam/realtime/rom1kx8_stub.vhdl:5' bound to instance 'my_rom' of component 'rom1kx8' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Char_Gen.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'rom1kx8' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-19048-25thBam/realtime/rom1kx8_stub.vhdl:17]
 WARNING: [Synth 8-6014] Unused sequential element col3_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Char_Gen.vhd:75]
 WARNING: [Synth 8-6014] Unused sequential element Red_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Char_Gen.vhd:82]
 WARNING: [Synth 8-6014] Unused sequential element Red_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Char_Gen.vhd:83]
@@ -59,16 +59,16 @@ INFO: [Synth 8-256] done synthesizing module 'Char_Gen' (4#1) [C:/Users/Jason/De
 INFO: [Synth 8-3491] module 'colorPlexer' declared at 'C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/colorPlexer.vhd:34' bound to instance 'cp1' of component 'colorPlexer' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Game_Top.vhd:115]
 INFO: [Synth 8-638] synthesizing module 'colorPlexer' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/colorPlexer.vhd:49]
 INFO: [Synth 8-256] done synthesizing module 'colorPlexer' (5#1) [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/colorPlexer.vhd:49]
-INFO: [Synth 8-3491] module 'hurdles' declared at 'C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:35' bound to instance 'h1' of component 'hurdles' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Game_Top.vhd:120]
-INFO: [Synth 8-638] synthesizing module 'hurdles' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:46]
-WARNING: [Synth 8-614] signal 'flag' is read in the process but is not in the sensitivity list [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:55]
-WARNING: [Synth 8-614] signal 'Object_X_pos' is read in the process but is not in the sensitivity list [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:55]
-WARNING: [Synth 8-614] signal 'Object_Y_pos' is read in the process but is not in the sensitivity list [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:55]
-WARNING: [Synth 8-614] signal 'flag2' is read in the process but is not in the sensitivity list [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:55]
-WARNING: [Synth 8-614] signal 'Object_X_pos2' is read in the process but is not in the sensitivity list [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:55]
-WARNING: [Synth 8-614] signal 'flag3' is read in the process but is not in the sensitivity list [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:55]
-WARNING: [Synth 8-614] signal 'Object_X_pos3' is read in the process but is not in the sensitivity list [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:55]
-INFO: [Synth 8-256] done synthesizing module 'hurdles' (6#1) [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:46]
+INFO: [Synth 8-3491] module 'hurdles' declared at 'C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:27' bound to instance 'h1' of component 'hurdles' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Game_Top.vhd:120]
+INFO: [Synth 8-638] synthesizing module 'hurdles' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:38]
+WARNING: [Synth 8-614] signal 'flag' is read in the process but is not in the sensitivity list [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:51]
+WARNING: [Synth 8-614] signal 'Object_X_pos' is read in the process but is not in the sensitivity list [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:51]
+WARNING: [Synth 8-614] signal 'Object_Y_pos' is read in the process but is not in the sensitivity list [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:51]
+WARNING: [Synth 8-614] signal 'flag2' is read in the process but is not in the sensitivity list [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:51]
+WARNING: [Synth 8-614] signal 'Object_X_pos2' is read in the process but is not in the sensitivity list [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:51]
+WARNING: [Synth 8-614] signal 'flag3' is read in the process but is not in the sensitivity list [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:51]
+WARNING: [Synth 8-614] signal 'Object_X_pos3' is read in the process but is not in the sensitivity list [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'hurdles' (6#1) [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:38]
 INFO: [Synth 8-256] done synthesizing module 'Game_Top' (7#1) [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Game_Top.vhd:24]
 WARNING: [Synth 8-3331] design Char_Gen has unconnected port hcount[10]
 WARNING: [Synth 8-3331] design Char_Gen has unconnected port hcount[9]
@@ -109,7 +109,7 @@ WARNING: [Synth 8-3331] design char_driver has unconnected port vcount[2]
 WARNING: [Synth 8-3331] design char_driver has unconnected port vcount[1]
 WARNING: [Synth 8-3331] design char_driver has unconnected port vcount[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 371.449 ; gain = 132.180
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 371.473 ; gain = 132.129
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -119,17 +119,17 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 371.449 ; gain = 132.180
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 371.473 ; gain = 132.129
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-6704-25thBam/dcp5/clk_wiz_0_in_context.xdc] for cell 'c1'
-Finished Parsing XDC File [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-6704-25thBam/dcp5/clk_wiz_0_in_context.xdc] for cell 'c1'
-Parsing XDC File [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-6704-25thBam/dcp7/rom1kx8_in_context.xdc] for cell 'm1/my_rom'
-Finished Parsing XDC File [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-6704-25thBam/dcp7/rom1kx8_in_context.xdc] for cell 'm1/my_rom'
+Parsing XDC File [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-19048-25thBam/dcp5/clk_wiz_0_in_context.xdc] for cell 'c1'
+Finished Parsing XDC File [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-19048-25thBam/dcp5/clk_wiz_0_in_context.xdc] for cell 'c1'
+Parsing XDC File [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-19048-25thBam/dcp7/rom1kx8_in_context.xdc] for cell 'm1/my_rom'
+Finished Parsing XDC File [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-19048-25thBam/dcp7/rom1kx8_in_context.xdc] for cell 'm1/my_rom'
 Parsing XDC File [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/constrs_1/new/vgatop_pins.xdc]
 Finished Parsing XDC File [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/constrs_1/new/vgatop_pins.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/constrs_1/new/vgatop_pins.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Game_Top_propImpl.xdc].
@@ -139,37 +139,41 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 695.934 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 697.031 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 695.934 ; gain = 456.664
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 697.031 ; gain = 457.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 695.934 ; gain = 456.664
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 697.031 ; gain = 457.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for clk_100MHz. (constraint file  {C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-6704-25thBam/dcp5/clk_wiz_0_in_context.xdc}, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_100MHz. (constraint file  {C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-6704-25thBam/dcp5/clk_wiz_0_in_context.xdc}, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for clk_100MHz. (constraint file  {C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-19048-25thBam/dcp5/clk_wiz_0_in_context.xdc}, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_100MHz. (constraint file  {C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-19048-25thBam/dcp5/clk_wiz_0_in_context.xdc}, line 4).
 Applied set_property DONT_TOUCH = true for c1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for m1/my_rom. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 695.934 ; gain = 456.664
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 697.031 ; gain = 457.688
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-6014] Unused sequential element hcounter_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/vga_controller_640_60.vhd:128]
 WARNING: [Synth 8-6014] Unused sequential element vcounter_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/vga_controller_640_60.vhd:129]
-WARNING: [Synth 8-6014] Unused sequential element Green_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:65]
-WARNING: [Synth 8-6014] Unused sequential element Blue_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:66]
-WARNING: [Synth 8-6014] Unused sequential element Object_X_pos_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:116]
-WARNING: [Synth 8-6014] Unused sequential element Object_X_pos2_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:137]
-WARNING: [Synth 8-6014] Unused sequential element Object_X_pos3_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:149]
-WARNING: [Synth 8-327] inferring latch for variable 'Red_reg' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:64]
+WARNING: [Synth 8-6014] Unused sequential element green1_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:61]
+WARNING: [Synth 8-6014] Unused sequential element blue1_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:62]
+WARNING: [Synth 8-6014] Unused sequential element green2_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:77]
+WARNING: [Synth 8-6014] Unused sequential element blue2_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:78]
+WARNING: [Synth 8-6014] Unused sequential element green3_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:93]
+WARNING: [Synth 8-6014] Unused sequential element blue3_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:94]
+WARNING: [Synth 8-6014] Unused sequential element speed_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:115]
+WARNING: [Synth 8-327] inferring latch for variable 'red2_reg' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:76]
+WARNING: [Synth 8-327] inferring latch for variable 'red3_reg' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:92]
+WARNING: [Synth 8-327] inferring latch for variable 'red1_reg' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:60]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 695.934 ; gain = 456.664
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 697.031 ; gain = 457.688
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -182,16 +186,17 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     11 Bit       Adders := 8     
-	   3 Input     11 Bit       Adders := 9     
+	   2 Input     11 Bit       Adders := 5     
+	   3 Input     11 Bit       Adders := 12    
 +---Registers : 
 	               11 Bit    Registers := 5     
 	                3 Bit    Registers := 2     
 	                1 Bit    Registers := 7     
 +---Muxes : 
+	   2 Input     11 Bit        Muxes := 7     
 	   4 Input      4 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 5     
-	   2 Input      1 Bit        Muxes := 21    
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 26    
 	   4 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -222,14 +227,14 @@ Detailed RTL Component Info :
 Module hurdles 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     11 Bit       Adders := 6     
-	   3 Input     11 Bit       Adders := 9     
+	   3 Input     11 Bit       Adders := 12    
+	   2 Input     11 Bit       Adders := 3     
 +---Registers : 
 	               11 Bit    Registers := 3     
 	                1 Bit    Registers := 3     
 +---Muxes : 
-	   2 Input      4 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 19    
+	   2 Input     11 Bit        Muxes := 7     
+	   2 Input      1 Bit        Muxes := 24    
 	   4 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
@@ -248,20 +253,39 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-6014] Unused sequential element v1/hcounter_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/vga_controller_640_60.vhd:128]
 WARNING: [Synth 8-6014] Unused sequential element v1/vcounter_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/vga_controller_640_60.vhd:129]
-WARNING: [Synth 8-6014] Unused sequential element h1/Object_X_pos2_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:137]
-WARNING: [Synth 8-6014] Unused sequential element h1/Object_X_pos3_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:149]
-WARNING: [Synth 8-6014] Unused sequential element h1/Object_X_pos_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:116]
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\h1/minusOp_inferred__0 /\h1/Object_X_pos3_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\h1/minusOp_inferred /\h1/Object_X_pos2_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\h1/minusOp_inferred__1 /\h1/Object_X_pos_reg[0] )
-INFO: [Synth 8-3886] merging instance 'h1/Red_reg[0]' (LD) to 'h1/Red_reg[1]'
-INFO: [Synth 8-3886] merging instance 'h1/Red_reg[1]' (LD) to 'h1/Red_reg[2]'
-INFO: [Synth 8-3886] merging instance 'h1/Red_reg[2]' (LD) to 'h1/Red_reg[3]'
-WARNING: [Synth 8-3332] Sequential element (h1/Object_X_pos2_reg[0]) is unused and will be removed from module Game_Top.
-WARNING: [Synth 8-3332] Sequential element (h1/Object_X_pos3_reg[0]) is unused and will be removed from module Game_Top.
-WARNING: [Synth 8-3332] Sequential element (h1/Object_X_pos_reg[0]) is unused and will be removed from module Game_Top.
+WARNING: [Synth 8-6014] Unused sequential element h1/speed_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:115]
+INFO: [Synth 8-3886] merging instance 'h1/red3_reg[0]' (LD) to 'h1/red3_reg[3]'
+INFO: [Synth 8-3886] merging instance 'h1/red2_reg[0]' (LD) to 'h1/red2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'h1/red1_reg[0]' (LD) to 'h1/red1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'h1/red3_reg[1]' (LD) to 'h1/red3_reg[3]'
+INFO: [Synth 8-3886] merging instance 'h1/red2_reg[1]' (LD) to 'h1/red2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'h1/red1_reg[1]' (LD) to 'h1/red1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'h1/red3_reg[2]' (LD) to 'h1/red3_reg[3]'
+INFO: [Synth 8-3886] merging instance 'h1/red2_reg[2]' (LD) to 'h1/red2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'h1/red1_reg[2]' (LD) to 'h1/red1_reg[3]'
+WARNING: [Synth 8-3332] Sequential element (h1/speed_reg[11]) is unused and will be removed from module Game_Top.
+WARNING: [Synth 8-3332] Sequential element (h1/speed_reg[12]) is unused and will be removed from module Game_Top.
+WARNING: [Synth 8-3332] Sequential element (h1/speed_reg[13]) is unused and will be removed from module Game_Top.
+WARNING: [Synth 8-3332] Sequential element (h1/speed_reg[14]) is unused and will be removed from module Game_Top.
+WARNING: [Synth 8-3332] Sequential element (h1/speed_reg[15]) is unused and will be removed from module Game_Top.
+WARNING: [Synth 8-3332] Sequential element (h1/speed_reg[16]) is unused and will be removed from module Game_Top.
+WARNING: [Synth 8-3332] Sequential element (h1/speed_reg[17]) is unused and will be removed from module Game_Top.
+WARNING: [Synth 8-3332] Sequential element (h1/speed_reg[18]) is unused and will be removed from module Game_Top.
+WARNING: [Synth 8-3332] Sequential element (h1/speed_reg[19]) is unused and will be removed from module Game_Top.
+WARNING: [Synth 8-3332] Sequential element (h1/speed_reg[20]) is unused and will be removed from module Game_Top.
+WARNING: [Synth 8-3332] Sequential element (h1/speed_reg[21]) is unused and will be removed from module Game_Top.
+WARNING: [Synth 8-3332] Sequential element (h1/speed_reg[22]) is unused and will be removed from module Game_Top.
+WARNING: [Synth 8-3332] Sequential element (h1/speed_reg[23]) is unused and will be removed from module Game_Top.
+WARNING: [Synth 8-3332] Sequential element (h1/speed_reg[24]) is unused and will be removed from module Game_Top.
+WARNING: [Synth 8-3332] Sequential element (h1/speed_reg[25]) is unused and will be removed from module Game_Top.
+WARNING: [Synth 8-3332] Sequential element (h1/speed_reg[26]) is unused and will be removed from module Game_Top.
+WARNING: [Synth 8-3332] Sequential element (h1/speed_reg[27]) is unused and will be removed from module Game_Top.
+WARNING: [Synth 8-3332] Sequential element (h1/speed_reg[28]) is unused and will be removed from module Game_Top.
+WARNING: [Synth 8-3332] Sequential element (h1/speed_reg[29]) is unused and will be removed from module Game_Top.
+WARNING: [Synth 8-3332] Sequential element (h1/speed_reg[30]) is unused and will be removed from module Game_Top.
+WARNING: [Synth 8-3332] Sequential element (h1/speed_reg[31]) is unused and will be removed from module Game_Top.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 695.934 ; gain = 456.664
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 697.031 ; gain = 457.688
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -275,13 +299,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'c1/clk_out1' to pin 'c1/bbstub_clk_out1/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 695.934 ; gain = 456.664
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 697.031 ; gain = 457.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 708.961 ; gain = 469.691
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 709.047 ; gain = 469.703
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -292,10 +316,10 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (h1/Red_reg[3]) is unused and will be removed from module Game_Top.
+WARNING: [Synth 8-3332] Sequential element (h1/red1_reg[3]) is unused and will be removed from module Game_Top.
 WARNING: [Synth 8-3332] Sequential element (h1/flag_reg) is unused and will be removed from module Game_Top.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 717.992 ; gain = 478.723
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 718.227 ; gain = 478.883
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -329,7 +353,7 @@ CRITICAL WARNING: [Synth 8-4442] BlackBox module \m1/my_rom  has unconnected pin
 CRITICAL WARNING: [Synth 8-4442] BlackBox module \m1/my_rom  has unconnected pin dina[1]
 CRITICAL WARNING: [Synth 8-4442] BlackBox module \m1/my_rom  has unconnected pin dina[0]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 717.992 ; gain = 478.723
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 718.227 ; gain = 478.883
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -342,7 +366,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 717.992 ; gain = 478.723
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 718.227 ; gain = 478.883
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -354,25 +378,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 717.992 ; gain = 478.723
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 718.227 ; gain = 478.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 717.992 ; gain = 478.723
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 718.227 ; gain = 478.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 717.992 ; gain = 478.723
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 718.227 ; gain = 478.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 717.992 ; gain = 478.723
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 718.227 ; gain = 478.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -392,48 +416,50 @@ Report Cell Usage:
 +------+---------------+------+
 |1     |clk_wiz_0_bbox |     1|
 |2     |rom1kx8_bbox   |     1|
-|3     |BUFG           |     1|
-|4     |CARRY4         |    27|
-|5     |LUT1           |    15|
-|6     |LUT2           |   108|
-|7     |LUT3           |    25|
-|8     |LUT4           |    71|
-|9     |LUT5           |    31|
+|3     |BUFG           |     2|
+|4     |CARRY4         |    39|
+|5     |LUT1           |    13|
+|6     |LUT2           |   160|
+|7     |LUT3           |    36|
+|8     |LUT4           |    56|
+|9     |LUT5           |    17|
 |10    |LUT6           |    68|
 |11    |MUXF7          |     1|
-|12    |FDCE           |     7|
-|13    |FDPE           |     5|
-|14    |FDRE           |    52|
-|15    |IBUF           |     1|
-|16    |OBUF           |    15|
+|12    |FDCE           |    30|
+|13    |FDPE           |    16|
+|14    |FDRE           |    32|
+|15    |LD             |     2|
+|16    |IBUF           |     1|
+|17    |OBUF           |    15|
 +------+---------------+------+
 
 Report Instance Areas: 
 +------+---------+----------------------+------+
 |      |Instance |Module                |Cells |
 +------+---------+----------------------+------+
-|1     |top      |                      |   437|
-|2     |  h1     |hurdles               |   208|
-|3     |  m1     |Char_Gen              |    19|
-|4     |  v1     |vga_controller_640_60 |   190|
+|1     |top      |                      |   498|
+|2     |  h1     |hurdles               |   259|
+|3     |  m1     |Char_Gen              |    18|
+|4     |  v1     |vga_controller_640_60 |   201|
 +------+---------+----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 717.992 ; gain = 478.723
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 718.227 ; gain = 478.883
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 10 critical warnings and 18 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 717.992 ; gain = 154.238
-Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 717.992 ; gain = 478.723
+Synthesis finished with 0 errors, 10 critical warnings and 38 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 718.227 ; gain = 153.324
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 718.227 ; gain = 478.883
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 28 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 42 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 2 instances were transformed.
+  LD => LDCE: 2 instances
 
-43 Infos, 84 Warnings, 10 Critical Warnings and 0 Errors encountered.
+46 Infos, 104 Warnings, 10 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 717.992 ; gain = 485.281
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 718.227 ; gain = 485.492
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/Game_Top.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 717.992 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Mar 11 21:25:06 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 718.227 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 12 22:50:08 2018...
