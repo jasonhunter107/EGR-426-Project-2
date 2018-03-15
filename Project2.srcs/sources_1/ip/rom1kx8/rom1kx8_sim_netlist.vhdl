@@ -1,7 +1,7 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
--- Date        : Thu Mar  8 14:56:13 2018
+-- Date        : Tue Mar 13 19:25:11 2018
 -- Host        : 25thBam running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim {C:/Users/Jason/Desktop/EGR
 --               426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/ip/rom1kx8/rom1kx8_sim_netlist.vhdl}
@@ -16,12 +16,9 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity rom1kx8_blk_mem_gen_prim_wrapper_init is
   port (
-    douta : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    DOADO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     clka : in STD_LOGIC;
-    ena : in STD_LOGIC;
-    addra : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    dina : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    wea : in STD_LOGIC_VECTOR ( 0 to 0 )
+    addra : in STD_LOGIC_VECTOR ( 9 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of rom1kx8_blk_mem_gen_prim_wrapper_init : entity is "blk_mem_gen_prim_wrapper_init";
@@ -151,10 +148,7 @@ begin
       ADDRBWRADDR(13 downto 0) => B"00000000000000",
       CLKARDCLK => clka,
       CLKBWRCLK => clka,
-      DIADI(15 downto 12) => B"0000",
-      DIADI(11 downto 8) => dina(7 downto 4),
-      DIADI(7 downto 4) => B"0000",
-      DIADI(3 downto 0) => dina(3 downto 0),
+      DIADI(15 downto 0) => B"0000000000000000",
       DIBDI(15 downto 0) => B"0000000000000000",
       DIPADIP(1 downto 0) => B"00",
       DIPBDIP(1 downto 0) => B"00",
@@ -162,26 +156,25 @@ begin
       DOADO(14) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_n_1\,
       DOADO(13) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_n_2\,
       DOADO(12) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_n_3\,
-      DOADO(11 downto 8) => douta(7 downto 4),
+      DOADO(11 downto 8) => DOADO(7 downto 4),
       DOADO(7) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_n_8\,
       DOADO(6) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_n_9\,
       DOADO(5) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_n_10\,
       DOADO(4) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_n_11\,
-      DOADO(3 downto 0) => douta(3 downto 0),
+      DOADO(3 downto 0) => DOADO(3 downto 0),
       DOBDO(15 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_DOBDO_UNCONNECTED\(15 downto 0),
       DOPADOP(1) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_n_32\,
       DOPADOP(0) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_n_33\,
       DOPBDOP(1 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_DOPBDOP_UNCONNECTED\(1 downto 0),
-      ENARDEN => ena,
+      ENARDEN => '1',
       ENBWREN => '0',
-      REGCEAREGCE => ena,
+      REGCEAREGCE => '1',
       REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
       RSTREGB => '0',
-      WEA(1) => wea(0),
-      WEA(0) => wea(0),
+      WEA(1 downto 0) => B"00",
       WEBWE(3 downto 0) => B"0000"
     );
 end STRUCTURE;
@@ -191,12 +184,9 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity rom1kx8_blk_mem_gen_prim_width is
   port (
-    douta : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    DOADO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     clka : in STD_LOGIC;
-    ena : in STD_LOGIC;
-    addra : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    dina : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    wea : in STD_LOGIC_VECTOR ( 0 to 0 )
+    addra : in STD_LOGIC_VECTOR ( 9 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of rom1kx8_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
@@ -206,12 +196,9 @@ architecture STRUCTURE of rom1kx8_blk_mem_gen_prim_width is
 begin
 \prim_init.ram\: entity work.rom1kx8_blk_mem_gen_prim_wrapper_init
      port map (
+      DOADO(7 downto 0) => DOADO(7 downto 0),
       addra(9 downto 0) => addra(9 downto 0),
-      clka => clka,
-      dina(7 downto 0) => dina(7 downto 0),
-      douta(7 downto 0) => douta(7 downto 0),
-      ena => ena,
-      wea(0) => wea(0)
+      clka => clka
     );
 end STRUCTURE;
 library IEEE;
@@ -222,25 +209,108 @@ entity rom1kx8_blk_mem_gen_generic_cstr is
   port (
     douta : out STD_LOGIC_VECTOR ( 7 downto 0 );
     clka : in STD_LOGIC;
-    ena : in STD_LOGIC;
-    addra : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    dina : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    wea : in STD_LOGIC_VECTOR ( 0 to 0 )
+    addra : in STD_LOGIC_VECTOR ( 9 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of rom1kx8_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end rom1kx8_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of rom1kx8_blk_mem_gen_generic_cstr is
+  signal ram_douta : STD_LOGIC_VECTOR ( 7 downto 0 );
 begin
+\mux_a_wire.mux_reg.ce_pri.douta_i_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clka,
+      CE => '1',
+      D => ram_douta(0),
+      Q => douta(0),
+      R => '0'
+    );
+\mux_a_wire.mux_reg.ce_pri.douta_i_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clka,
+      CE => '1',
+      D => ram_douta(1),
+      Q => douta(1),
+      R => '0'
+    );
+\mux_a_wire.mux_reg.ce_pri.douta_i_reg[2]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clka,
+      CE => '1',
+      D => ram_douta(2),
+      Q => douta(2),
+      R => '0'
+    );
+\mux_a_wire.mux_reg.ce_pri.douta_i_reg[3]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clka,
+      CE => '1',
+      D => ram_douta(3),
+      Q => douta(3),
+      R => '0'
+    );
+\mux_a_wire.mux_reg.ce_pri.douta_i_reg[4]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clka,
+      CE => '1',
+      D => ram_douta(4),
+      Q => douta(4),
+      R => '0'
+    );
+\mux_a_wire.mux_reg.ce_pri.douta_i_reg[5]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clka,
+      CE => '1',
+      D => ram_douta(5),
+      Q => douta(5),
+      R => '0'
+    );
+\mux_a_wire.mux_reg.ce_pri.douta_i_reg[6]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clka,
+      CE => '1',
+      D => ram_douta(6),
+      Q => douta(6),
+      R => '0'
+    );
+\mux_a_wire.mux_reg.ce_pri.douta_i_reg[7]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clka,
+      CE => '1',
+      D => ram_douta(7),
+      Q => douta(7),
+      R => '0'
+    );
 \ramloop[0].ram.r\: entity work.rom1kx8_blk_mem_gen_prim_width
      port map (
+      DOADO(7 downto 0) => ram_douta(7 downto 0),
       addra(9 downto 0) => addra(9 downto 0),
-      clka => clka,
-      dina(7 downto 0) => dina(7 downto 0),
-      douta(7 downto 0) => douta(7 downto 0),
-      ena => ena,
-      wea(0) => wea(0)
+      clka => clka
     );
 end STRUCTURE;
 library IEEE;
@@ -251,10 +321,7 @@ entity rom1kx8_blk_mem_gen_top is
   port (
     douta : out STD_LOGIC_VECTOR ( 7 downto 0 );
     clka : in STD_LOGIC;
-    ena : in STD_LOGIC;
-    addra : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    dina : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    wea : in STD_LOGIC_VECTOR ( 0 to 0 )
+    addra : in STD_LOGIC_VECTOR ( 9 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of rom1kx8_blk_mem_gen_top : entity is "blk_mem_gen_top";
@@ -266,10 +333,7 @@ begin
      port map (
       addra(9 downto 0) => addra(9 downto 0),
       clka => clka,
-      dina(7 downto 0) => dina(7 downto 0),
-      douta(7 downto 0) => douta(7 downto 0),
-      ena => ena,
-      wea(0) => wea(0)
+      douta(7 downto 0) => douta(7 downto 0)
     );
 end STRUCTURE;
 library IEEE;
@@ -280,10 +344,7 @@ entity rom1kx8_blk_mem_gen_v8_3_6_synth is
   port (
     douta : out STD_LOGIC_VECTOR ( 7 downto 0 );
     clka : in STD_LOGIC;
-    ena : in STD_LOGIC;
-    addra : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    dina : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    wea : in STD_LOGIC_VECTOR ( 0 to 0 )
+    addra : in STD_LOGIC_VECTOR ( 9 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of rom1kx8_blk_mem_gen_v8_3_6_synth : entity is "blk_mem_gen_v8_3_6_synth";
@@ -295,10 +356,7 @@ begin
      port map (
       addra(9 downto 0) => addra(9 downto 0),
       clka => clka,
-      dina(7 downto 0) => dina(7 downto 0),
-      douta(7 downto 0) => douta(7 downto 0),
-      ena => ena,
-      wea(0) => wea(0)
+      douta(7 downto 0) => douta(7 downto 0)
     );
 end STRUCTURE;
 library IEEE;
@@ -418,13 +476,13 @@ entity rom1kx8_blk_mem_gen_v8_3_6 is
   attribute C_EN_SLEEP_PIN : integer;
   attribute C_EN_SLEEP_PIN of rom1kx8_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_EST_POWER_SUMMARY : string;
-  attribute C_EST_POWER_SUMMARY of rom1kx8_blk_mem_gen_v8_3_6 : entity is "Estimated Power for IP     :     1.35165 mW";
+  attribute C_EST_POWER_SUMMARY of rom1kx8_blk_mem_gen_v8_3_6 : entity is "Estimated Power for IP     :     1.1884 mW";
   attribute C_FAMILY : string;
   attribute C_FAMILY of rom1kx8_blk_mem_gen_v8_3_6 : entity is "artix7";
   attribute C_HAS_AXI_ID : integer;
   attribute C_HAS_AXI_ID of rom1kx8_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_HAS_ENA : integer;
-  attribute C_HAS_ENA of rom1kx8_blk_mem_gen_v8_3_6 : entity is 1;
+  attribute C_HAS_ENA of rom1kx8_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_HAS_ENB : integer;
   attribute C_HAS_ENB of rom1kx8_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_HAS_INJECTERR : integer;
@@ -434,7 +492,7 @@ entity rom1kx8_blk_mem_gen_v8_3_6 is
   attribute C_HAS_MEM_OUTPUT_REGS_B : integer;
   attribute C_HAS_MEM_OUTPUT_REGS_B of rom1kx8_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_HAS_MUX_OUTPUT_REGS_A : integer;
-  attribute C_HAS_MUX_OUTPUT_REGS_A of rom1kx8_blk_mem_gen_v8_3_6 : entity is 0;
+  attribute C_HAS_MUX_OUTPUT_REGS_A of rom1kx8_blk_mem_gen_v8_3_6 : entity is 1;
   attribute C_HAS_MUX_OUTPUT_REGS_B : integer;
   attribute C_HAS_MUX_OUTPUT_REGS_B of rom1kx8_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_HAS_REGCEA : integer;
@@ -462,7 +520,7 @@ entity rom1kx8_blk_mem_gen_v8_3_6 is
   attribute C_LOAD_INIT_FILE : integer;
   attribute C_LOAD_INIT_FILE of rom1kx8_blk_mem_gen_v8_3_6 : entity is 1;
   attribute C_MEM_TYPE : integer;
-  attribute C_MEM_TYPE of rom1kx8_blk_mem_gen_v8_3_6 : entity is 0;
+  attribute C_MEM_TYPE of rom1kx8_blk_mem_gen_v8_3_6 : entity is 3;
   attribute C_MUX_PIPELINE_STAGES : integer;
   attribute C_MUX_PIPELINE_STAGES of rom1kx8_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_PRIM_TYPE : integer;
@@ -594,10 +652,7 @@ inst_blk_mem_gen: entity work.rom1kx8_blk_mem_gen_v8_3_6_synth
      port map (
       addra(9 downto 0) => addra(9 downto 0),
       clka => clka,
-      dina(7 downto 0) => dina(7 downto 0),
-      douta(7 downto 0) => douta(7 downto 0),
-      ena => ena,
-      wea(0) => wea(0)
+      douta(7 downto 0) => douta(7 downto 0)
     );
 end STRUCTURE;
 library IEEE;
@@ -607,10 +662,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity rom1kx8 is
   port (
     clka : in STD_LOGIC;
-    ena : in STD_LOGIC;
-    wea : in STD_LOGIC_VECTOR ( 0 to 0 );
     addra : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    dina : in STD_LOGIC_VECTOR ( 7 downto 0 );
     douta : out STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   attribute NotValidForBitStream : boolean;
@@ -691,13 +743,13 @@ architecture STRUCTURE of rom1kx8 is
   attribute C_EN_SLEEP_PIN : integer;
   attribute C_EN_SLEEP_PIN of U0 : label is 0;
   attribute C_EST_POWER_SUMMARY : string;
-  attribute C_EST_POWER_SUMMARY of U0 : label is "Estimated Power for IP     :     1.35165 mW";
+  attribute C_EST_POWER_SUMMARY of U0 : label is "Estimated Power for IP     :     1.1884 mW";
   attribute C_FAMILY : string;
   attribute C_FAMILY of U0 : label is "artix7";
   attribute C_HAS_AXI_ID : integer;
   attribute C_HAS_AXI_ID of U0 : label is 0;
   attribute C_HAS_ENA : integer;
-  attribute C_HAS_ENA of U0 : label is 1;
+  attribute C_HAS_ENA of U0 : label is 0;
   attribute C_HAS_ENB : integer;
   attribute C_HAS_ENB of U0 : label is 0;
   attribute C_HAS_INJECTERR : integer;
@@ -707,7 +759,7 @@ architecture STRUCTURE of rom1kx8 is
   attribute C_HAS_MEM_OUTPUT_REGS_B : integer;
   attribute C_HAS_MEM_OUTPUT_REGS_B of U0 : label is 0;
   attribute C_HAS_MUX_OUTPUT_REGS_A : integer;
-  attribute C_HAS_MUX_OUTPUT_REGS_A of U0 : label is 0;
+  attribute C_HAS_MUX_OUTPUT_REGS_A of U0 : label is 1;
   attribute C_HAS_MUX_OUTPUT_REGS_B : integer;
   attribute C_HAS_MUX_OUTPUT_REGS_B of U0 : label is 0;
   attribute C_HAS_REGCEA : integer;
@@ -735,7 +787,7 @@ architecture STRUCTURE of rom1kx8 is
   attribute C_LOAD_INIT_FILE : integer;
   attribute C_LOAD_INIT_FILE of U0 : label is 1;
   attribute C_MEM_TYPE : integer;
-  attribute C_MEM_TYPE of U0 : label is 0;
+  attribute C_MEM_TYPE of U0 : label is 3;
   attribute C_MUX_PIPELINE_STAGES : integer;
   attribute C_MUX_PIPELINE_STAGES of U0 : label is 0;
   attribute C_PRIM_TYPE : integer;
@@ -800,12 +852,12 @@ U0: entity work.rom1kx8_blk_mem_gen_v8_3_6
       clkb => '0',
       dbiterr => NLW_U0_dbiterr_UNCONNECTED,
       deepsleep => '0',
-      dina(7 downto 0) => dina(7 downto 0),
+      dina(7 downto 0) => B"00000000",
       dinb(7 downto 0) => B"00000000",
       douta(7 downto 0) => douta(7 downto 0),
       doutb(7 downto 0) => NLW_U0_doutb_UNCONNECTED(7 downto 0),
       eccpipece => '0',
-      ena => ena,
+      ena => '0',
       enb => '0',
       injectdbiterr => '0',
       injectsbiterr => '0',
@@ -855,7 +907,7 @@ U0: entity work.rom1kx8_blk_mem_gen_v8_3_6
       sbiterr => NLW_U0_sbiterr_UNCONNECTED,
       shutdown => '0',
       sleep => '0',
-      wea(0) => wea(0),
+      wea(0) => '0',
       web(0) => '0'
     );
 end STRUCTURE;

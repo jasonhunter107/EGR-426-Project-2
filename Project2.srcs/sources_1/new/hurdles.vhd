@@ -120,10 +120,11 @@ begin
   elsif(rising_edge(VS)) then
   ------------------------------------------------------------------------------
   if (flag = '1') then
-  if(Object_X_pos  > 20) then        -- Move from R -> L
+  if(Object_X_pos  > 20 and Object_X_pos > 200) then        -- Move from R -> L
       Object_X_pos <= Object_X_pos - speed;
    elsif(Object_X_pos <= 200) then             -- Checkpoint 1       
-           flag2 <= '1'; 
+    Object_X_pos <= Object_X_pos - speed;
+    flag2 <= '1'; 
   elsif(Object_X_pos <= 20) then             -- Reach extreme LEFT POSITION
       --Object_X_pos <= B"01001101100";        
        Object_X_pos <= Object_X_pos;
@@ -133,10 +134,11 @@ begin
   
 ------------------------------------------------------------------------------
   if (flag2 = '1') then
-  if(Object_X_pos2  > 20) then        -- Move from R -> L
+  if(Object_X_pos2  > 20 and Object_X_pos2 > 200) then        -- Move from R -> L
       Object_X_pos2 <= Object_X_pos2 - speed;
-   elsif(Object_X_pos2 <= 200) then             -- Checkpoint 2     
-               flag3 <= '1';  
+   elsif(Object_X_pos2 <= 200) then             -- Checkpoint 2  
+   Object_X_pos2 <= Object_X_pos2 - speed;   
+   flag3 <= '1';  
   elsif(Object_X_pos2 <= 20) then             -- Reach extreme LEFT POSITION
       Object_X_pos2 <= Object_X_pos2;    
       flag2 <= '0';         
