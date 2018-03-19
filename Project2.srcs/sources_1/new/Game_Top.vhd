@@ -15,7 +15,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity Game_Top is
-Port(clk_100MHz,reset : in STD_LOGIC; 
+Port(clk_100MHz,reset, btn_up : in STD_LOGIC; 
      HSYNC,VSYNC,locked : out STD_LOGIC;
      RED,GREEN,BLUE : out STD_LOGIC_VECTOR(3 downto 0));
 end Game_Top;
@@ -71,6 +71,15 @@ component hurdles
            Blue : out STD_LOGIC_VECTOR (3 downto 0));
 end component;
 
+--Runner
+component runner 
+Port (clk25 : in STD_LOGIC; hcount,vcount : in STD_LOGIC_VECTOR(10 downto 0); 
+      blank : in STD_LOGIC;
+      btn_up : in STD_LOGIC;
+      VS : in STD_LOGIC;
+      Red, Green, Blue : out STD_LOGIC_VECTOR(3 downto 0));
+end component;
+
 --Color multiplexer
 component colorPlexer
     Port ( Red_bgnd : in STD_LOGIC_VECTOR (3 downto 0);
@@ -82,6 +91,9 @@ component colorPlexer
            Red_hurd : in STD_LOGIC_VECTOR (3 downto 0);
            Green_hurd : in STD_LOGIC_VECTOR (3 downto 0);
            Blue_hurd : in STD_LOGIC_VECTOR (3 downto 0);
+           Red_run : in STD_LOGIC_VECTOR (3 downto 0);
+           Green_run : in STD_LOGIC_VECTOR (3 downto 0);
+           Blue_run: in STD_LOGIC_VECTOR (3 downto 0);
            Red : out STD_LOGIC_VECTOR (3 downto 0);
            Green : out STD_LOGIC_VECTOR (3 downto 0);
            Blue : out STD_LOGIC_VECTOR (3 downto 0));
@@ -93,6 +105,7 @@ signal ASCII_CHAR : STD_LOGIC_VECTOR(6 downto 0);
 signal Red_b,Green_b,Blue_b : STD_LOGIC_VECTOR(3 downto 0);
 signal Red_c,Green_c,Blue_c : STD_LOGIC_VECTOR(3 downto 0);
 signal Red_h,Green_h,Blue_h : STD_LOGIC_VECTOR(3 downto 0);
+signal Red_r, Green_r, Blue_r : STD_LOGIC_VECTOR(3 downto 0);
 
                         --Instantiating Components
 -- ---------------------------------------------------------------------
@@ -115,9 +128,14 @@ m1 : CHAR_GEN PORT MAP (clk25 => clk_25MHz, blank => blank, hcount => hcount, vc
 cp1: colorPlexer port map (Red_bgnd => Red_b ,Green_bgnd => Green_b ,Blue_bgnd => Blue_b, 
                                     Red_char => Red_c, Green_char => Green_c, Blue_char => Blue_c, 
                                     Red_hurd => Red_h, Green_hurd => Green_h, Blue_hurd => Blue_h,
+                                    Red_run => Red_r, Green_run => Green_r, Blue_run => Blue_r, 
                                     Red => RED,Green => GREEN ,Blue => BLUE);      
                                     
 h1: hurdles PORT MAP (reset => reset, VS => VSYNC_temp, blank => blank, hcount => hcount,
                                                              vcount => vcount, Red => Red_h, Green => Green_h, Blue => Blue_h);
+                                                             
+r1 : runner port map ( clk25 => clk_25MHz, hcount => hcount, vcount => vcount,  blank => blank, btn_up => btn_up, VS => VSYNC_temp, Red => Red_r, Green => Green_r, Blue => Blue_r);
+
+
    VSYNC <= VSYNC_temp;        
 end Behavioral;

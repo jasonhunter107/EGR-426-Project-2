@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Fri Mar 16 15:38:56 2018
+# Process ID: 20832
+# Current directory: C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/runner_rom_synth_1
+# Command line: vivado.exe -log runner_rom.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source runner_rom.tcl
+# Log file: C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/runner_rom_synth_1/runner_rom.vds
+# Journal file: C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/runner_rom_synth_1\vivado.jou
+#-----------------------------------------------------------
+source runner_rom.tcl -notrace

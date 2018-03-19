@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date             : Tue Mar 13 19:27:47 2018
+| Date             : Mon Mar 19 18:14:48 2018
 | Host             : 25thBam running 64-bit major release  (build 9200)
 | Command          : report_power -file Game_Top_power_routed.rpt -pb Game_Top_power_summary_routed.pb -rpx Game_Top_power_routed.rpx
 | Design           : Game_Top
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.191 |
-| Dynamic (W)              | 0.119 |
+| Total On-Chip Power (W)  | 0.192 |
+| Dynamic (W)              | 0.120 |
 | Device Static (W)        | 0.072 |
 | Effective TJA (C/W)      | 5.0   |
 | Max Ambient (C)          | 84.0  |
@@ -50,19 +50,19 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        5 |       --- |             --- |
-| Slice Logic    |     0.001 |      482 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      264 |     20800 |            1.27 |
-|   CARRY4       |    <0.001 |       39 |      8150 |            0.48 |
-|   Register     |    <0.001 |       90 |     41600 |            0.22 |
+| Slice Logic    |     0.001 |      613 |       --- |             --- |
+|   LUT as Logic |     0.001 |      354 |     20800 |            1.70 |
+|   CARRY4       |    <0.001 |       56 |      8150 |            0.69 |
+|   Register     |    <0.001 |       88 |     41600 |            0.21 |
 |   BUFG         |    <0.001 |        2 |        32 |            6.25 |
-|   Others       |     0.000 |       16 |       --- |             --- |
+|   Others       |     0.000 |       21 |       --- |             --- |
 |   F7/F8 Muxes  |     0.000 |        1 |     32600 |           <0.01 |
-| Signals        |    <0.001 |      361 |       --- |             --- |
-| Block RAM      |    <0.001 |      0.5 |        50 |            1.00 |
+| Signals        |     0.001 |      453 |       --- |             --- |
+| Block RAM      |    <0.001 |        2 |        50 |            4.00 |
 | MMCM           |     0.116 |        1 |         5 |           20.00 |
-| I/O            |    <0.001 |       17 |       106 |           16.04 |
+| I/O            |    <0.001 |       18 |       106 |           16.98 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.191 |          |           |                 |
+| Total          |     0.192 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.013 |       0.003 |      0.010 |
+| Vccint    |       1.000 |     0.014 |       0.004 |      0.010 |
 | Vccaux    |       1.800 |     0.077 |       0.064 |      0.013 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -143,7 +143,7 @@ Table of Contents
 +------------------------------------------------+-----------+
 | Name                                           | Power (W) |
 +------------------------------------------------+-----------+
-| Game_Top                                       |     0.119 |
+| Game_Top                                       |     0.120 |
 |   c1                                           |     0.116 |
 |     inst                                       |     0.116 |
 |   h1                                           |     0.002 |
@@ -154,6 +154,16 @@ Table of Contents
 |           gnbram.gnativebmg.native_blk_mem_gen |    <0.001 |
 |             valid.cstr                         |    <0.001 |
 |               ramloop[0].ram.r                 |    <0.001 |
+|                 prim_init.ram                  |    <0.001 |
+|   r1                                           |    <0.001 |
+|     rr                                         |    <0.001 |
+|       U0                                       |    <0.001 |
+|         inst_blk_mem_gen                       |    <0.001 |
+|           gnbram.gnativebmg.native_blk_mem_gen |    <0.001 |
+|             valid.cstr                         |    <0.001 |
+|               ramloop[0].ram.r                 |    <0.001 |
+|                 prim_init.ram                  |    <0.001 |
+|               ramloop[1].ram.r                 |    <0.001 |
 |                 prim_init.ram                  |    <0.001 |
 |   v1                                           |    <0.001 |
 +------------------------------------------------+-----------+

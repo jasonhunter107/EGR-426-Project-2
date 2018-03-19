@@ -1,0 +1,1 @@
+--relax --debug typical --mt auto -L xil_defaultlib -L secureip -L xpm --snapshot runner_rom xil_defaultlib.runner_rom -log elaborate.log

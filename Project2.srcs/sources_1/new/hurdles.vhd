@@ -30,6 +30,7 @@ entity hurdles is
            blank : in STD_LOGIC;
            hcount : in STD_LOGIC_VECTOR (10 downto 0);
            vcount : in STD_LOGIC_VECTOR (10 downto 0);
+     --      round : out STD_LOGIC_VECTOR(7 downto 0);
            Red : out STD_LOGIC_VECTOR (3 downto 0);
            Green : out STD_LOGIC_VECTOR (3 downto 0);
            Blue : out STD_LOGIC_VECTOR (3 downto 0));
@@ -39,6 +40,7 @@ architecture Behavioral of hurdles is
 
 signal Object_X_pos, Object_X_pos2, Object_X_pos3 : STD_LOGIC_VECTOR(10 downto 0) := B"01001101100"; -- Decimal 620
 signal Object_Y_pos : STD_LOGIC_VECTOR(10 downto 0) := B"00011110101"; -- Decimal 245
+signal tempRound : STD_LOGIC_VECTOR(7 downto 0) := X"00";
 signal speed : integer := 1;
 signal flag : STD_LOGIC := '1';
 signal flag2, flag3 : STD_LOGIC := '0';
@@ -48,9 +50,10 @@ signal blue1, blue2, blue3 : STD_LOGIC_VECTOR(3 downto 0);
 
 begin
 
- process(hcount,vcount,blank)       -- Displaying hurdle 1
+            --Procss for displaying hurdles
+ process(hcount,vcount,blank) 
  begin
- 
+                             --Displaying First Hurdle
    ------------------------------------------------------------------------------
  if (flag = '1') then
  if((((hcount - Object_X_pos) <= 15) and ((Object_X_pos - hcount) >= 15) and -- Lower rectangle
@@ -66,7 +69,7 @@ begin
     Blue1 <= X"0";
   end if; 
   end if;
- 
+                            --Displaying Second Hurdle
    ------------------------------------------------------------------------------ 
  if (flag2 = '1') then
   if((((hcount - Object_X_pos2) <= 15) and ((Object_X_pos2 - hcount) >= 15) and -- Lower rectangle
@@ -82,7 +85,7 @@ begin
      Blue2 <= X"0";
    end if; 
    end if;
-   
+                            --Displaying Third Hurdle
    ------------------------------------------------------------------------------  
  if (flag3 = '1') then
    if((((hcount - Object_X_pos3) <= 15) and ((Object_X_pos3 - hcount) >= 15) and -- Lower rectangle
@@ -104,7 +107,7 @@ begin
     
 
  end process;
- 
+                           --Process of Hurdle physics
  -------------------------------------------------------------------------------
  process(VS, reset) -- Moving the hurdles from right to left and back on Vertical sync
  begin
@@ -116,8 +119,10 @@ begin
       flag <= '1';
       flag2 <= '0';
       flag3 <= '0';
+     --tempRound <= X"00";
         
   elsif(rising_edge(VS)) then
+                              --Physics for first hurdle
   ------------------------------------------------------------------------------
   if (flag = '1') then
   if(Object_X_pos  > 20 and Object_X_pos > 200) then        -- Move from R -> L
@@ -125,13 +130,12 @@ begin
    elsif(Object_X_pos <= 200) then             -- Checkpoint 1       
     Object_X_pos <= Object_X_pos - speed;
     flag2 <= '1'; 
-  elsif(Object_X_pos <= 20) then             -- Reach extreme LEFT POSITION
-      --Object_X_pos <= B"01001101100";        
+  elsif(Object_X_pos <= 20) then             -- Reach extreme LEFT POSITION    
        Object_X_pos <= Object_X_pos;
        flag <= '0';   
     end if;
   end if;
-  
+                              --Physics for second hurdle
 ------------------------------------------------------------------------------
   if (flag2 = '1') then
   if(Object_X_pos2  > 20 and Object_X_pos2 > 200) then        -- Move from R -> L
@@ -144,7 +148,7 @@ begin
       flag2 <= '0';         
     end if;
   end if;
-  
+                             --Physics for third hurdle
   ------------------------------------------------------------------------------  
   if (flag3 = '1') then
   if(Object_X_pos3  > 20) then        -- Move from R -> L
@@ -157,12 +161,9 @@ begin
       Object_X_pos2 <= B"01001101100";    -- Decimal 620
       Object_X_pos3<= B"01001101100";    -- Decimal 620   
       speed <= speed + 1; 
+      --tempRound <= tempRound + 1;
     end if;
   end if;
-  
-  
- 
-  
   
   end if;
   end process;
@@ -170,6 +171,7 @@ begin
 Red <= red1 or red2 or red3;
 Green <= green1 or green2 or green3;
 Blue <= blue1 or blue2 or blue3;
+--round <= tempRound;
 
 
 end Behavioral;

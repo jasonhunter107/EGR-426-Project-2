@@ -12,6 +12,9 @@ set_property PACKAGE_PIN R19 [get_ports VSYNC]
 
 set_property IOSTANDARD LVCMOS33 [get_ports locked]
 set_property PACKAGE_PIN U16 [get_ports locked]
+
+set_property IOSTANDARD LVCMOS33 [get_ports btn_up]
+set_property PACKAGE_PIN T18 [get_ports btn_up]
     
    
 set_property IOSTANDARD LVCMOS33 [get_ports {BLUE[0]}]

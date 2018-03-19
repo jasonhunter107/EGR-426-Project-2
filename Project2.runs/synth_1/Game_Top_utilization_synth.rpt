@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Tue Mar 13 19:26:47 2018
+| Date         : Mon Mar 19 18:13:49 2018
 | Host         : 25thBam running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Game_Top_utilization_synth.rpt -pb Game_Top_utilization_synth.pb
 | Design       : Game_Top
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  273 |     0 |     20800 |  1.31 |
-|   LUT as Logic          |  273 |     0 |     20800 |  1.31 |
+| Slice LUTs*             |  364 |     0 |     20800 |  1.75 |
+|   LUT as Logic          |  364 |     0 |     20800 |  1.75 |
 |   LUT as Memory         |    0 |     0 |      9600 |  0.00 |
-| Slice Registers         |   80 |     0 |     41600 |  0.19 |
-|   Register as Flip Flop |   78 |     0 |     41600 |  0.19 |
+| Slice Registers         |   86 |     0 |     41600 |  0.21 |
+|   Register as Flip Flop |   84 |     0 |     41600 |  0.20 |
 |   Register as Latch     |    2 |     0 |     41600 | <0.01 |
 | F7 Muxes                |    1 |     0 |     16300 | <0.01 |
 | F8 Muxes                |    0 |     0 |      8150 |  0.00 |
@@ -56,8 +56,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 16    |          Yes |           - |          Set |
 | 32    |          Yes |           - |        Reset |
-| 0     |          Yes |         Set |            - |
-| 32    |          Yes |       Reset |            - |
+| 5     |          Yes |         Set |            - |
+| 33    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   16 |     0 |       106 | 15.09 |
+| Bonded IOB                  |   17 |     0 |       106 | 16.04 |
 | Bonded IPADs                |    0 |     0 |        10 |  0.00 |
 | Bonded OPADs                |    0 |     0 |         4 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         5 |  0.00 |
@@ -149,33 +149,35 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT2     |  160 |                 LUT |
-| LUT6     |   64 |                 LUT |
-| LUT4     |   61 |                 LUT |
-| CARRY4   |   39 |          CarryLogic |
-| LUT3     |   32 |                 LUT |
-| FDRE     |   32 |        Flop & Latch |
+| LUT2     |  210 |                 LUT |
+| LUT4     |   80 |                 LUT |
+| LUT6     |   77 |                 LUT |
+| CARRY4   |   56 |          CarryLogic |
+| LUT3     |   43 |                 LUT |
+| FDRE     |   33 |        Flop & Latch |
 | FDCE     |   30 |        Flop & Latch |
+| LUT5     |   26 |                 LUT |
+| LUT1     |   19 |                 LUT |
 | FDPE     |   16 |        Flop & Latch |
 | OBUF     |   15 |                  IO |
-| LUT5     |   13 |                 LUT |
-| LUT1     |   13 |                 LUT |
+| FDSE     |    5 |        Flop & Latch |
 | LDCE     |    2 |        Flop & Latch |
+| IBUF     |    2 |                  IO |
 | BUFG     |    2 |               Clock |
 | MUXF7    |    1 |               MuxFx |
-| IBUF     |    1 |                  IO |
 +----------+------+---------------------+
 
 
 8. Black Boxes
 --------------
 
-+-----------+------+
-|  Ref Name | Used |
-+-----------+------+
-| rom1kx8   |    1 |
-| clk_wiz_0 |    1 |
-+-----------+------+
++------------+------+
+|  Ref Name  | Used |
++------------+------+
+| runner_rom |    1 |
+| rom1kx8    |    1 |
+| clk_wiz_0  |    1 |
++------------+------+
 
 
 9. Instantiated Netlists

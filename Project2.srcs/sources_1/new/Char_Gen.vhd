@@ -68,16 +68,7 @@ pixel_row <= vcount(2 downto 0);
 pixel_col <= hcount(2 downto 0);
 ROM_ADDRESS <= ASCII_CHAR & pixel_row;  -- Generating ROM address
 
- process(clk25)
-  variable col1,col2,col3 : NATURAL range 0 to 7;
-  begin
-   if rising_edge(clk25) then
-	  col3 := col2;
-	  col2 := col1;
-	  col1 := conv_integer(pixel_col);
-	  INTENSITY <= ROM_DATA(col3);
-   end if;
- end process;
+INTENSITY <= ROM_DATA(conv_integer(pixel_col));
 
  Red(3) <= INTENSITY when blank='0' else '0';
  Red(2) <= INTENSITY when blank='0' else '0';
