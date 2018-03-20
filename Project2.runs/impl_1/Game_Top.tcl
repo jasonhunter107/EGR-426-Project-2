@@ -42,6 +42,7 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -59,10 +60,10 @@ set rc [catch {
   add_files -quiet {{C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/Game_Top.dcp}}
   read_ip -quiet {{C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}
   set_property is_locked true [get_files {{C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}]
-  read_ip -quiet {{C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/ip/rom1kx8/rom1kx8.xci}}
-  set_property is_locked true [get_files {{C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/ip/rom1kx8/rom1kx8.xci}}]
   read_ip -quiet {{C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/ip/runner_rom_1/runner_rom.xci}}
   set_property is_locked true [get_files {{C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/ip/runner_rom_1/runner_rom.xci}}]
+  read_ip -quiet {{C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/ip/rom1kx8/rom1kx8.xci}}
+  set_property is_locked true [get_files {{C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/ip/rom1kx8/rom1kx8.xci}}]
   read_xdc {{C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/constrs_1/new/vgatop_pins.xdc}}
   link_design -top Game_Top -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb

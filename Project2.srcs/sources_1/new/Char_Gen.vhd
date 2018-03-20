@@ -68,22 +68,22 @@ pixel_row <= vcount(2 downto 0);
 pixel_col <= hcount(2 downto 0);
 ROM_ADDRESS <= ASCII_CHAR & pixel_row;  -- Generating ROM address
 
-INTENSITY <= ROM_DATA(conv_integer(pixel_col));
+ process(clk25)
+  variable col1,col2,col3 : NATURAL range 0 to 7;
+  begin
+   if rising_edge(clk25) then
+	  col3 := col2;
+	  col2 := col1;
+	  col1 := conv_integer(pixel_col);
+	  INTENSITY <= ROM_DATA(col3);
+   end if;
+ end process;
 
- Red(3) <= INTENSITY when blank='0' else '0';
- Red(2) <= INTENSITY when blank='0' else '0';
- Red(1) <= INTENSITY when blank='0' else '0';
- Red(0) <= INTENSITY when blank='0' else '0';
+Red <= (INTENSITY & INTENSITY & INTENSITY & INTENSITY) when (blank = '0') else X"0";
  
- Green(3) <= INTENSITY when blank='0' else '0';
- Green(2) <= INTENSITY when blank='0' else '0';
- Green(1) <= INTENSITY when blank='0' else '0';
- Green(0) <= INTENSITY when blank='0' else '0';
+Green <= (INTENSITY & INTENSITY & INTENSITY & INTENSITY) when (blank = '0') else X"0";
  
- Blue(3) <= INTENSITY when blank='0' else '0';
- Blue(2) <= INTENSITY when blank='0' else '0';
- Blue(1) <= INTENSITY when blank='0' else '0';
- Blue(0) <= INTENSITY when blank='0' else '0';
+Blue <= (INTENSITY & INTENSITY & INTENSITY & INTENSITY) when (blank = '0') else X"0";
  
 
 end Behavioral;

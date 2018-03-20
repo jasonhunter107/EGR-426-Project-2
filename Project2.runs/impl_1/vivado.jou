@@ -2,8 +2,8 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Mon Mar 19 18:13:55 2018
-# Process ID: 20204
+# Start of session at: Tue Mar 20 03:58:07 2018
+# Process ID: 9236
 # Current directory: C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/impl_1
 # Command line: vivado.exe -log Game_Top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Game_Top.tcl -notrace
 # Log file: C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/impl_1/Game_Top.vdi

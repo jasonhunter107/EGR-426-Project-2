@@ -33,14 +33,7 @@ end staticBackground;
 
 architecture Behavioral of staticBackground is
 
-signal tempV, tempH : STD_LOGIC_VECTOR(10 downto 0);
-
 begin
-
-tempV <= vcount;
-tempH <= hcount;
-
---(vcount >= 150) and (vcount < 250) and (hcount >= 310) and (hcount < 410) and blank='0'
 
 Blue <= "0000"; 
                         		    

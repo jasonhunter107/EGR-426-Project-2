@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1521497590">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1521532640">
   <File Type="RDS-PROPCONSTRS" Name="Game_Top_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="Game_Top.tcl"/>
   <File Type="RDS-RDS" Name="Game_Top.vds"/>
@@ -71,7 +71,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/ip/rom1kx8/char.coe">
+    <File Path="$PPRDIR/typeface.coe">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -100,6 +100,6 @@
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="rom1kx8"/>
   <BlockFileSet Type="BlockSrcs" Name="runner_rom"/>
+  <BlockFileSet Type="BlockSrcs" Name="rom1kx8"/>
 </GenRun>

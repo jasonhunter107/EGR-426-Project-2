@@ -1,9 +1,5 @@
-; This COE file describes the font for 8x8 pixels and 128 characters.
-; The characters from 0 to 63 are the usual letters, digits, symbols
-; while the characters from 64 to 127 are the same except color-reversed.
-; That is, character 1 is the letter A with 1-bits drawing the A on a
-; background of 0 bits, while character 129 is the letter A with 0-bits
-; drawing the A on a background of 1 bits.
+; This COE file describes the font for 8x8 pixels and 22 characters.
+; These characters include only the letters and numbers I need to display on the screen
 
 ; ---------------------------
 ; Character Code  | Character
@@ -26,9 +22,10 @@
 ;      16         |    8     
 ;      17         |    9       
 ;      18         |    C
-;      19         |    O      
+;      19         |    O
 ;      20         |    blank
 ;      21         |    -    
+;      22         |    N   
 ; ---------------------------
 
 memory_initialization_radix = 2;
@@ -230,4 +227,13 @@ memory_initialization_vector =
  00000000
  00000000
  00000000
+ 00000000
+ 
+ 01100110
+ 01101110
+ 01111110
+ 01111110
+ 01110110
+ 01100110
+ 01100110
  00000000
