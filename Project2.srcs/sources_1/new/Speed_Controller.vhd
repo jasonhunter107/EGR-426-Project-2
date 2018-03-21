@@ -4,7 +4,7 @@
 -- 
 -- Create Date: 03/19/2018 04:47:11 PM
 -- Design Name: 
--- Module Name: Game_Logic - Behavioral
+-- Module Name: Speed_Controller - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -24,17 +24,12 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_unsigned.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
-entity Game_Logic is
+entity Speed_Controller is
     Port ( round : in STD_LOGIC_VECTOR (7 downto 0);
-           Hurdle_X_Pos : in STD_LOGIC_VECTOR (10 downto 0);
-           Hurdle_Y_Pos : in STD_LOGIC_VECTOR (10 downto 0);
-           Runr_X_Pos : in STD_LOGIC_VECTOR (10 downto 0);
-           Runr_Y_Pos : in STD_LOGIC_VECTOR (10 downto 0);
-           collision : out STD_LOGIC;
            speed : out STD_LOGIC_VECTOR (3 downto 0));
-end Game_Logic;
+end Speed_Controller;
 
-architecture Behavioral of Game_Logic is
+architecture Behavioral of Speed_Controller is
 
 signal tempSpeed : STD_LOGIC_VECTOR (3 downto 0);
 

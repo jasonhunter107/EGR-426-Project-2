@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Tue Mar 20 03:59:00 2018
+| Date         : Wed Mar 21 05:49:14 2018
 | Host         : 25thBam running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Game_Top_methodology_drc_routed.rpt -rpx Game_Top_methodology_drc_routed.rpx
 | Design       : Game_Top
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 76
+             Violations found: 91
 +-----------+----------+-------------------------------+------------+
 | Rule      | Severity | Description                   | Violations |
 +-----------+----------+-------------------------------+------------+
-| TIMING-17 | Warning  | Non-clocked sequential cell   | 59         |
+| TIMING-17 | Warning  | Non-clocked sequential cell   | 74         |
 | TIMING-18 | Warning  | Missing input or output delay | 15         |
 | TIMING-20 | Warning  | Non-clocked latch             | 2          |
 +-----------+----------+-------------------------------+------------+
@@ -266,65 +266,140 @@ Related violations: <none>
 
 TIMING-17#47 Warning
 Non-clocked sequential cell  
-The clock pin r1/Runner_Y_Pos_reg[0]/C is not reached by a timing clock
+The clock pin h1/tempRound_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#48 Warning
 Non-clocked sequential cell  
-The clock pin r1/Runner_Y_Pos_reg[10]/C is not reached by a timing clock
+The clock pin h1/tempRound_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#49 Warning
 Non-clocked sequential cell  
-The clock pin r1/Runner_Y_Pos_reg[1]/C is not reached by a timing clock
+The clock pin h1/tempRound_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#50 Warning
 Non-clocked sequential cell  
-The clock pin r1/Runner_Y_Pos_reg[2]/C is not reached by a timing clock
+The clock pin h1/tempRound_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#51 Warning
 Non-clocked sequential cell  
-The clock pin r1/Runner_Y_Pos_reg[3]/C is not reached by a timing clock
+The clock pin h1/tempRound_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#52 Warning
 Non-clocked sequential cell  
-The clock pin r1/Runner_Y_Pos_reg[4]/C is not reached by a timing clock
+The clock pin h1/tempRound_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#53 Warning
 Non-clocked sequential cell  
-The clock pin r1/Runner_Y_Pos_reg[5]/C is not reached by a timing clock
+The clock pin h1/tempRound_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#54 Warning
 Non-clocked sequential cell  
-The clock pin r1/Runner_Y_Pos_reg[6]/C is not reached by a timing clock
+The clock pin h1/tempRound_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#55 Warning
 Non-clocked sequential cell  
-The clock pin r1/Runner_Y_Pos_reg[7]/C is not reached by a timing clock
+The clock pin h1/tempScore_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#56 Warning
 Non-clocked sequential cell  
-The clock pin r1/Runner_Y_Pos_reg[8]/C is not reached by a timing clock
+The clock pin h1/tempScore_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#57 Warning
 Non-clocked sequential cell  
-The clock pin r1/Runner_Y_Pos_reg[9]/C is not reached by a timing clock
+The clock pin h1/tempScore_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#58 Warning
 Non-clocked sequential cell  
-The clock pin r1/falling_reg/C is not reached by a timing clock
+The clock pin h1/tempScore_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#59 Warning
+Non-clocked sequential cell  
+The clock pin h1/tempScore_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#60 Warning
+Non-clocked sequential cell  
+The clock pin h1/tempScore_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#61 Warning
+Non-clocked sequential cell  
+The clock pin h1/tempScore_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#62 Warning
+Non-clocked sequential cell  
+The clock pin r1/Runner_Y_Pos_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#63 Warning
+Non-clocked sequential cell  
+The clock pin r1/Runner_Y_Pos_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#64 Warning
+Non-clocked sequential cell  
+The clock pin r1/Runner_Y_Pos_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#65 Warning
+Non-clocked sequential cell  
+The clock pin r1/Runner_Y_Pos_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#66 Warning
+Non-clocked sequential cell  
+The clock pin r1/Runner_Y_Pos_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#67 Warning
+Non-clocked sequential cell  
+The clock pin r1/Runner_Y_Pos_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#68 Warning
+Non-clocked sequential cell  
+The clock pin r1/Runner_Y_Pos_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#69 Warning
+Non-clocked sequential cell  
+The clock pin r1/Runner_Y_Pos_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#70 Warning
+Non-clocked sequential cell  
+The clock pin r1/Runner_Y_Pos_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#71 Warning
+Non-clocked sequential cell  
+The clock pin r1/Runner_Y_Pos_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#72 Warning
+Non-clocked sequential cell  
+The clock pin r1/Runner_Y_Pos_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#73 Warning
+Non-clocked sequential cell  
+The clock pin r1/falling_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#74 Warning
 Non-clocked sequential cell  
 The clock pin r1/jump_reg/C is not reached by a timing clock
 Related violations: <none>

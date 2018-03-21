@@ -47,9 +47,13 @@ entity colorPlexer is
            Red : out STD_LOGIC_VECTOR (3 downto 0);
            Green : out STD_LOGIC_VECTOR (3 downto 0);
            Blue : out STD_LOGIC_VECTOR (3 downto 0));
+         --colision : out STD_LOGIC;  
 end colorPlexer;
 
 architecture Behavioral of colorPlexer is
+
+signal collisionFlag : STD_LOGIC := '0';
+
 begin
 
 Red <= Red_char or Red_bgnd or Red_hurd or Red_run;

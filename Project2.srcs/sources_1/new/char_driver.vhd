@@ -21,10 +21,15 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 entity char_driver is
     Port ( hcount : in STD_LOGIC_VECTOR (10 downto 0);
            vcount : in STD_LOGIC_VECTOR (10 downto 0);
+           reset: in STD_LOGIC;
+           score : in STD_LOGIC_VECTOR(11 downto 0);
+           round : in STD_LOGIC_VECTOR(7 downto 0);
            ASCII_CHAR : out STD_LOGIC_VECTOR (6 downto 0));
 end char_driver;
 
@@ -33,10 +38,58 @@ architecture Behavioral of char_driver is
 signal char_col : std_logic_vector(6 downto 0);
 signal char_row : std_logic_vector(5 downto 0);
 signal charOut : STD_LOGIC_VECTOR(6 downto 0);
+--signal ones, tens, hundreds : STD_LOGIC_VECTOR(6 downto 0) := "0000000";
+signal roundOnes, roundTens, roundHundreds :  STD_LOGIC_VECTOR(6 downto 0) := "0000000";
+--variable ones, tens, hundreds : unsigned(6 downto 0);
 begin
-process(hcount) begin
+
+--                        --Process to update score
+---------------------------------------------------------------------
+--process (score) 
+--begin
+--if ( to_integer(unsigned(score)) mod 10 = 0) then
+--tens <= tens + 1;
+--ones <= "0000000";
+
+--elsif ( to_integer(unsigned(score)) mod 100 = 0) then
+--hundreds <= hundreds + 1;
+--tens <= "0000000";
+--ones <= "0000000";
+
+--else 
+--ones <= ones + 1;
+--end if;
+--end process;
+
+--                        --Process to update round
+---------------------------------------------------------------------
+--process (round) 
+--begin
+--if ( unsigned(round) mod 10 = X"0000") then
+--roundTens <= roundTens + 1;
+--roundOnes <= "0000000";
+
+--elsif ( unsigned(round) mod 100 = X"0000") then
+--roundHundreds <= roundHundreds + 1;
+--roundTens <= "0000000";
+--roundOnes <= "0000000";
+
+--else 
+--roundOnes <= roundOnes + 1;
+--end if;
+--end process;
+
+                        --Process to generate ROM address
+-------------------------------------------------------------------
+process(hcount, score)
+variable ones, tens, hundreds : unsigned(6 downto 0);
+
+begin
  char_col <= hcount(9 downto 3);  -- Character column in [0,79]
  char_row <= vcount(8 downto 3);  -- Character row in [0,59]
+ ones := unsigned(score (6 downto 0)) mod 10;
+ tens := unsigned(score (6 downto 0)) mod 100;
+ hundreds := unsigned(score (6 downto 0)) mod 1000;
  
   if(char_row="000011") then 
     if(char_col="0000011") then
@@ -85,11 +138,11 @@ process(hcount) begin
       elsif(char_col="0001000") then
          charOut<="0010101";         -- -
       elsif(char_col="0001001") then
-         charOut<="0001000";         -- num
+         charOut<= roundHundreds + "0001000";         -- num
       elsif(char_col="0001010") then
-         charOut<="0001000";         -- num
+         charOut<= roundTens + "0001000";         -- num
       elsif(char_col="0001011") then
-         charOut<="0001000";         -- num
+         charOut<= round (6 downto 0) + "0001001";         -- num
       else
          charOut<="0010100";         -- blank
       end if;
@@ -109,15 +162,14 @@ process(hcount) begin
     elsif(char_col="0001000") then
        charOut<="0010101";         -- -
     elsif(char_col="0001001") then
-       charOut<="0001000";         -- num
+       charOut<= std_logic_vector(hundreds) + "0001000";     -- num
     elsif(char_col="0001010") then
-       charOut<="0001000";         -- num
+       charOut<= std_logic_vector(tens) + "0001000";         -- num
     elsif(char_col="0001011") then
-       charOut<="0001000";         -- num
+       charOut<= std_logic_vector(ones) + "0001000";         -- num
     else
        charOut<="0010100";         -- blank
     end if;
-    
     
 else
    charOut<="0010100";

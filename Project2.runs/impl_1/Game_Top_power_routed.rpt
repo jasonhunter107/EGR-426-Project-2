@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date             : Tue Mar 20 03:59:00 2018
+| Date             : Wed Mar 21 05:49:14 2018
 | Host             : 25thBam running 64-bit major release  (build 9200)
 | Command          : report_power -file Game_Top_power_routed.rpt -pb Game_Top_power_summary_routed.pb -rpx Game_Top_power_routed.rpx
 | Design           : Game_Top
@@ -31,7 +31,7 @@ Table of Contents
 
 +--------------------------+-------+
 | Total On-Chip Power (W)  | 0.193 |
-| Dynamic (W)              | 0.120 |
+| Dynamic (W)              | 0.121 |
 | Device Static (W)        | 0.072 |
 | Effective TJA (C/W)      | 5.0   |
 | Max Ambient (C)          | 84.0  |
@@ -50,14 +50,14 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        5 |       --- |             --- |
-| Slice Logic    |     0.001 |      649 |       --- |             --- |
-|   LUT as Logic |     0.001 |      380 |     20800 |            1.83 |
-|   CARRY4       |    <0.001 |       56 |      8150 |            0.69 |
-|   Register     |    <0.001 |       93 |     41600 |            0.22 |
+| Slice Logic    |     0.001 |      700 |       --- |             --- |
+|   LUT as Logic |     0.001 |      410 |     20800 |            1.97 |
+|   CARRY4       |    <0.001 |       58 |      8150 |            0.71 |
+|   Register     |    <0.001 |      108 |     41600 |            0.26 |
 |   BUFG         |    <0.001 |        2 |        32 |            6.25 |
 |   F7/F8 Muxes  |    <0.001 |        1 |     32600 |           <0.01 |
 |   Others       |     0.000 |       20 |       --- |             --- |
-| Signals        |     0.001 |      485 |       --- |             --- |
+| Signals        |     0.001 |      531 |       --- |             --- |
 | Block RAM      |    <0.001 |        2 |        50 |            4.00 |
 | MMCM           |     0.116 |        1 |         5 |           20.00 |
 | I/O            |    <0.001 |       18 |       106 |           16.98 |
@@ -143,7 +143,7 @@ Table of Contents
 +------------------------------------------------+-----------+
 | Name                                           | Power (W) |
 +------------------------------------------------+-----------+
-| Game_Top                                       |     0.120 |
+| Game_Top                                       |     0.121 |
 |   c1                                           |     0.116 |
 |     inst                                       |     0.116 |
 |   h1                                           |     0.002 |

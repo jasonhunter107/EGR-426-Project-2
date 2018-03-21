@@ -24,21 +24,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_unsigned.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
-
 entity runner is
 Port (clk25 : in STD_LOGIC; hcount,vcount : in STD_LOGIC_VECTOR(10 downto 0); 
       blank : in STD_LOGIC;
       btn_up : in STD_LOGIC;
       VS : in STD_LOGIC;
-  --    speed : in STD_LOGIC_VECTOR(3 downto 0);
+      speed : in STD_LOGIC_VECTOR(3 downto 0);
+      runnerEnable : out STD_LOGIC;
       Red, Green, Blue : out STD_LOGIC_VECTOR(3 downto 0));
 end runner;
 
@@ -132,13 +124,13 @@ end process;
     falling <= '0';
     in_air <= '1';
     elsif (Runner_Y_Pos <= 117) then
-    Runner_Y_Pos <= Runner_Y_Pos + 1;
-     --Runner_Y_Pos <= Runner_Y_Pos + speed;
+   -- Runner_Y_Pos <= Runner_Y_Pos + 1;
+     Runner_Y_Pos <= Runner_Y_Pos + speed;
     jump <= '0';
     falling <= '1';
     elsif(Runner_Y_Pos < 217 and falling = '1') then
-    Runner_Y_Pos <= Runner_Y_Pos + 1;
-     --Runner_Y_Pos <= Runner_Y_Pos + speed;
+    --Runner_Y_Pos <= Runner_Y_Pos + 1;
+     Runner_Y_Pos <= Runner_Y_Pos + speed;
     jump <= '0';
     falling <= '1';
     elsif (Runner_Y_Pos >= 217 and falling = '1') then
