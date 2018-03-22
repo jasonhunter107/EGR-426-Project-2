@@ -38,11 +38,11 @@ begin
 process (round) --Round 4 is when current jumping speed (+- 10) is usable
 begin
     case (round) is
-    when X"00" => tempSpeed <= "0001"; --Round 1 Set runner speed to 1
-    when X"01" => tempSpeed <= "0011"; --Round 2 Set runner speed to 3
-    when X"02" => tempSpeed <= "0101"; --Round 3 Set runner speed to 5
-    when X"03" => tempSpeed <= "1010"; --Round 4 Set runner speed to 10
-    when others => tempSpeed <= "1010"; --Round 5 and above Set runner speed to 10
+    when X"01" => tempSpeed <= "0001"; --Round 1 Set runner speed to 1
+    when X"02" => tempSpeed <= "0010"; --Round 2 Set runner speed to 2
+    when X"03" => tempSpeed <= "0100"; --Round 3 Set runner speed to 4    
+    when X"04" => tempSpeed <= "0110"; --Round 4 Set runner speed to 6 
+    when others => tempSpeed <= "1000"; --Round 5 and above Set runner speed to 10
     
     end case;
 

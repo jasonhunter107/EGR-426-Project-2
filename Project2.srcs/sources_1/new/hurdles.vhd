@@ -30,9 +30,12 @@ entity hurdles is
            blank : in STD_LOGIC;
            hcount : in STD_LOGIC_VECTOR (10 downto 0);
            vcount : in STD_LOGIC_VECTOR (10 downto 0);
-           runnerEnable : in STD_LOGIC;
+           collision: in STD_LOGIC;
            round : out STD_LOGIC_VECTOR(7 downto 0);
            score : out STD_LOGIC_VECTOR(11 downto 0);
+           hurdle_X_pos,hurdle_Y_pos : out STD_LOGIC_VECTOR(10 downto 0);
+           hurdle2_X_pos,hurdle2_Y_pos : out STD_LOGIC_VECTOR(10 downto 0);
+           hurdle3_X_pos,hurdle3_Y_pos : out STD_LOGIC_VECTOR(10 downto 0);
            Red : out STD_LOGIC_VECTOR (3 downto 0);
            Green : out STD_LOGIC_VECTOR (3 downto 0);
            Blue : out STD_LOGIC_VECTOR (3 downto 0));
@@ -43,7 +46,7 @@ architecture Behavioral of hurdles is
 --Signal declaration and instantiation
 signal Object_X_pos, Object_X_pos2, Object_X_pos3 : STD_LOGIC_VECTOR(10 downto 0) := B"01001101100"; -- Decimal 620; X position of hurdles
 signal Object_Y_pos : STD_LOGIC_VECTOR(10 downto 0) := B"00011110101"; -- Decimal 245; Y position of hurdles
-signal tempRound : STD_LOGIC_VECTOR(7 downto 0) := X"00"; --Round
+signal tempRound : STD_LOGIC_VECTOR(7 downto 0) := X"01"; --Round
 signal speed : integer := 1; --Speed of hurdles
 signal flag : STD_LOGIC := '1'; --display flag for hurdle1
 signal flag2, flag3 : STD_LOGIC := '0'; --display flag for hurdle1
@@ -51,7 +54,6 @@ signal red1, red2, red3 : STD_LOGIC_VECTOR(3 downto 0); --Red value for hurdles
 signal green1, green2, green3 : STD_LOGIC_VECTOR(3 downto 0); --White values for hurdles
 signal blue1, blue2, blue3 : STD_LOGIC_VECTOR(3 downto 0); --Blue values for hurdles
 signal tempScore : STD_LOGIC_VECTOR (11 downto 0) := X"000"; --Score of the game
-signal collision : STD_LOGIC := '0';
 
 begin
 
@@ -109,23 +111,10 @@ begin
     
  end process;
  
-                            --Process of collision detection
--------------------------------------------------------------------------------
-process (runnerEnable, flag, flag2, flag3) 
-begin
-
-if (((runnerEnable and flag) = '1') or ((runnerEnable and flag2) = '1') or ((runnerEnable and flag3)) = '1' ) then
-collision <= '1';
-
-else
-collision <= '0';
-
-end if;
-end process;
  
                            --Process of Hurdle physics
  -------------------------------------------------------------------------------
- process(VS, reset) -- Moving the hurdles from right to left and back on Vertical sync
+ process(VS, reset, collision) -- Moving the hurdles from right to left and back on Vertical sync
  begin
  -- If user pressed the reset button then reset the hurdles, round, score and speed
   if(reset = '1') then
@@ -137,7 +126,7 @@ end process;
      flag2 <= '0';
      flag3 <= '0';
      tempScore <= X"000";
-     tempRound <= X"00";
+     tempRound <= X"01";
      
      
   elsif (collision = '1') then
@@ -203,5 +192,10 @@ Green <= green1 or green2 or green3;
 Blue <= blue1 or blue2 or blue3;
 round <= tempRound;
 score <= tempScore;
-
+hurdle_X_pos <= Object_X_pos;
+hurdle_Y_pos <= Object_Y_pos;
+hurdle2_X_pos <= Object_X_pos2;
+hurdle2_Y_pos <= Object_Y_pos;
+hurdle3_X_pos <= Object_X_pos3;
+hurdle3_Y_pos <= Object_Y_pos;
 end Behavioral;

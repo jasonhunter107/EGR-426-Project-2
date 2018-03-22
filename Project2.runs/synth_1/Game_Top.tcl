@@ -20,6 +20,7 @@ add_files {{C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/runnerBlue
 add_files {{C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/typeface.coe}}
 read_vhdl -library xil_defaultlib {
   {C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Char_Gen.vhd}
+  {C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Collision_Detection.vhd}
   {C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Speed_Controller.vhd}
   {C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/char_driver.vhd}
   {C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/colorPlexer.vhd}

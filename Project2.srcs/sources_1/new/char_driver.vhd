@@ -38,59 +38,45 @@ architecture Behavioral of char_driver is
 signal char_col : std_logic_vector(6 downto 0);
 signal char_row : std_logic_vector(5 downto 0);
 signal charOut : STD_LOGIC_VECTOR(6 downto 0);
---signal ones, tens, hundreds : STD_LOGIC_VECTOR(6 downto 0) := "0000000";
-signal roundOnes, roundTens, roundHundreds :  STD_LOGIC_VECTOR(6 downto 0) := "0000000";
---variable ones, tens, hundreds : unsigned(6 downto 0);
+
+
 begin
-
---                        --Process to update score
----------------------------------------------------------------------
---process (score) 
---begin
---if ( to_integer(unsigned(score)) mod 10 = 0) then
---tens <= tens + 1;
---ones <= "0000000";
-
---elsif ( to_integer(unsigned(score)) mod 100 = 0) then
---hundreds <= hundreds + 1;
---tens <= "0000000";
---ones <= "0000000";
-
---else 
---ones <= ones + 1;
---end if;
---end process;
-
---                        --Process to update round
----------------------------------------------------------------------
---process (round) 
---begin
---if ( unsigned(round) mod 10 = X"0000") then
---roundTens <= roundTens + 1;
---roundOnes <= "0000000";
-
---elsif ( unsigned(round) mod 100 = X"0000") then
---roundHundreds <= roundHundreds + 1;
---roundTens <= "0000000";
---roundOnes <= "0000000";
-
---else 
---roundOnes <= roundOnes + 1;
---end if;
---end process;
 
                         --Process to generate ROM address
 -------------------------------------------------------------------
-process(hcount, score)
-variable ones, tens, hundreds : unsigned(6 downto 0);
+process(hcount, score, round)
+--Score numbers
+variable tempOnes, tempTens, tempHundreds : Integer;
+variable ones, tens, hundreds : STD_LOGIC_VECTOR(11 downto 0);
+
+--Round numbers
+variable tempRoundOnes, tempRoundTens, tempRoundHundreds : Integer;
+variable roundOnes, roundTens, roundHundreds : STD_LOGIC_VECTOR(11 downto 0);
 
 begin
  char_col <= hcount(9 downto 3);  -- Character column in [0,79]
  char_row <= vcount(8 downto 3);  -- Character row in [0,59]
- ones := unsigned(score (6 downto 0)) mod 10;
- tens := unsigned(score (6 downto 0)) mod 100;
- hundreds := unsigned(score (6 downto 0)) mod 1000;
  
+  --Getting the hundreds, tens, and ones place of score
+ ----------------------------------------------------------
+ tempOnes := to_integer(unsigned(score)) mod 10;
+ tempTens := (to_integer(unsigned(score)) / 10) mod 10;
+ tempHundreds := to_integer(unsigned(score)) / 100;
+ 
+ ones := std_logic_vector(to_unsigned(tempOnes,ones'length));
+ tens := std_logic_vector(to_unsigned(tempTens,tens'length));
+ hundreds := std_logic_vector(to_unsigned(tempHundreds,hundreds'length));
+ 
+   --Getting the hundreds, tens, and ones place of round
+----------------------------------------------------------
+tempRoundOnes := to_integer(unsigned(round)) mod 10;
+tempRoundTens := (to_integer(unsigned(round)) / 10) mod 10;
+tempRoundHundreds := to_integer(unsigned(round)) / 100;
+
+roundOnes := std_logic_vector(to_unsigned(tempRoundOnes,ones'length));
+roundTens := std_logic_vector(to_unsigned(tempRoundTens,tens'length));
+roundHundreds := std_logic_vector(to_unsigned(tempRoundHundreds,hundreds'length));
+
   if(char_row="000011") then 
     if(char_col="0000011") then
        charOut<="0000000";         -- H 
@@ -138,11 +124,11 @@ begin
       elsif(char_col="0001000") then
          charOut<="0010101";         -- -
       elsif(char_col="0001001") then
-         charOut<= roundHundreds + "0001000";         -- num
+         charOut<= roundHundreds (6 downto 0) + "0001000";     -- num
       elsif(char_col="0001010") then
-         charOut<= roundTens + "0001000";         -- num
+         charOut<= roundTens (6 downto 0) + "0001000";         -- num
       elsif(char_col="0001011") then
-         charOut<= round (6 downto 0) + "0001001";         -- num
+         charOut<= roundOnes (6 downto 0) + "0001000";         -- num
       else
          charOut<="0010100";         -- blank
       end if;
@@ -162,11 +148,11 @@ begin
     elsif(char_col="0001000") then
        charOut<="0010101";         -- -
     elsif(char_col="0001001") then
-       charOut<= std_logic_vector(hundreds) + "0001000";     -- num
+       charOut<= hundreds (6 downto 0) + "0001000";     -- num
     elsif(char_col="0001010") then
-       charOut<= std_logic_vector(tens) + "0001000";         -- num
+       charOut<= tens (6 downto 0) + "0001000";         -- num
     elsif(char_col="0001011") then
-       charOut<= std_logic_vector(ones) + "0001000";         -- num
+       charOut<= ones(6 downto 0) + "0001000";         -- num
     else
        charOut<="0010100";         -- blank
     end if;

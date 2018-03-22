@@ -29,8 +29,10 @@ Port (clk25 : in STD_LOGIC; hcount,vcount : in STD_LOGIC_VECTOR(10 downto 0);
       blank : in STD_LOGIC;
       btn_up : in STD_LOGIC;
       VS : in STD_LOGIC;
+      collision : in STD_LOGIC;
       speed : in STD_LOGIC_VECTOR(3 downto 0);
-      runnerEnable : out STD_LOGIC;
+      RunnerX_pos : out STD_LOGIC_VECTOR( 10 downto 0);
+      RunnerY_pos : out STD_LOGIC_VECTOR( 10 downto 0);
       Red, Green, Blue : out STD_LOGIC_VECTOR(3 downto 0));
 end runner;
 
@@ -116,7 +118,7 @@ end process;
  process(VS) 
  begin
   if(rising_edge(VS)) then
-    if (btn_up = '1' or jump = '1' or falling = '1') then
+    if ((btn_up = '1' or jump = '1' or falling = '1') and collision = '0') then
     
     if ((Runner_Y_Pos <= 217) and (Runner_Y_Pos > 117) and ((jump = '1') or (btn_up = '1'))) then
     Runner_Y_Pos <= Runner_Y_Pos - 10;
@@ -142,5 +144,9 @@ end process;
     end if;
   end if;       -- rising_edge
   end process;
+
+--Set the runner coordinates to the output
+RunnerX_pos <= Runner_X_Pos;
+RunnerY_pos <= Runner_Y_pos;
 
 end Behavioral;

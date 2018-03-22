@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="rom1kx8_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1521615434">
-  <File Type="PA-TCL" Name="rom1kx8.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="rom1kx8_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="rom1kx8.tcl"/>
   <File Type="RDS-RDS" Name="rom1kx8.vds"/>
   <File Type="RDS-UTIL" Name="rom1kx8_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="rom1kx8_utilization_synth.pb"/>
