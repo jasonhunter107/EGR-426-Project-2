@@ -15,9 +15,9 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity Game_Top is
-Port(clk_100MHz,reset, btn_up : in STD_LOGIC; 
-     HSYNC,VSYNC,locked : out STD_LOGIC;
-     RED,GREEN,BLUE : out STD_LOGIC_VECTOR(3 downto 0));
+Port(clk_100MHz,reset, btn_up : in STD_LOGIC; --100 Mhz clock, reset button, jump button
+     HSYNC,VSYNC,locked : out STD_LOGIC; --HSYNC, VSYNC, and locked
+     RED,GREEN,BLUE : out STD_LOGIC_VECTOR(3 downto 0)); --RGB Values
 end Game_Top;
 
 
@@ -92,11 +92,13 @@ Port (clk25 : in STD_LOGIC; hcount,vcount : in STD_LOGIC_VECTOR(10 downto 0);
       Red, Green, Blue : out STD_LOGIC_VECTOR(3 downto 0));
 end component;
 
+--Speed controller
 component Speed_Controller 
     Port ( round : in STD_LOGIC_VECTOR (7 downto 0);
            speed : out STD_LOGIC_VECTOR (3 downto 0));
 end component;
 
+--Collision detection
 component Collision_Detection 
   Port (
             hurdle_X_pos,hurdle_Y_pos : in STD_LOGIC_VECTOR(10 downto 0);
@@ -104,7 +106,7 @@ component Collision_Detection
             hurdle3_X_pos,hurdle3_Y_pos : in STD_LOGIC_VECTOR(10 downto 0);
             runner_X_pos,runner_Y_pos : in STD_LOGIC_VECTOR(10 downto 0);
             reset : in STD_LOGIC;
-            collision_detected : out STD_LOGIC
+            collision : out STD_LOGIC
         );
 end component;
 
@@ -127,19 +129,21 @@ component colorPlexer
            Blue : out STD_LOGIC_VECTOR (3 downto 0));
 end component;
 
-signal clk_25MHz,blank, VSYNC_temp : STD_LOGIC;
-signal hcount,vcount : STD_LOGIC_VECTOR(10 downto 0);
-signal ASCII_CHAR : STD_LOGIC_VECTOR(6 downto 0);
-signal score : STD_LOGIC_VECTOR (11 downto 0);
-signal round : STD_LOGIC_VECTOR (7 downto 0);
-signal speed : STD_LOGIC_VECTOR (3 downto 0);
-signal collision : STd_LOGIC;
+                --Signal instantiation
+----------------------------------------------------------
+signal clk_25MHz,blank, VSYNC_temp : STD_LOGIC;--25Mhz clock, blank, Vertical sync
+signal hcount,vcount : STD_LOGIC_VECTOR(10 downto 0); --hcount, vcount
+signal ASCII_CHAR : STD_LOGIC_VECTOR(6 downto 0); --ASCII_CHAR of ROM (letter in ROM)
+signal score : STD_LOGIC_VECTOR (11 downto 0); --Score of game
+signal round : STD_LOGIC_VECTOR (7 downto 0); --Round of game
+signal speed : STD_LOGIC_VECTOR (3 downto 0); --Speed of the runner
+signal collision : STD_LOGIC; --Collision flag
 signal hurdle_X_pos,hurdle_Y_pos : STD_LOGIC_VECTOR(10 downto 0);
-signal hurdle2_X_pos,hurdle2_Y_pos : STD_LOGIC_VECTOR(10 downto 0);
+signal hurdle2_X_pos,hurdle2_Y_pos : STD_LOGIC_VECTOR(10 downto 0); --All the hurdle's X an dY coordinates
 signal hurdle3_X_pos,hurdle3_Y_pos : STD_LOGIC_VECTOR(10 downto 0);
-signal runner_X_pos,runner_Y_pos : STD_LOGIC_VECTOR(10 downto 0);
+signal runner_X_pos,runner_Y_pos : STD_LOGIC_VECTOR(10 downto 0); --Runner's X and Y coordinates
 signal Red_b,Green_b,Blue_b : STD_LOGIC_VECTOR(3 downto 0);
-signal Red_c,Green_c,Blue_c : STD_LOGIC_VECTOR(3 downto 0);
+signal Red_c,Green_c,Blue_c : STD_LOGIC_VECTOR(3 downto 0); --All visual components RGB value
 signal Red_h,Green_h,Blue_h : STD_LOGIC_VECTOR(3 downto 0);
 signal Red_r, Green_r, Blue_r : STD_LOGIC_VECTOR(3 downto 0);
 
@@ -178,7 +182,7 @@ sp1: Speed_Controller port map (round => round, speed => speed);
 
 cl1: Collision_Detection port map (hurdle_X_pos =>hurdle_X_pos , hurdle_Y_pos => hurdle_Y_pos ,hurdle2_X_pos => hurdle2_X_pos,
                       hurdle2_Y_pos => hurdle2_Y_pos ,hurdle3_X_pos => hurdle3_X_pos,hurdle3_Y_pos => hurdle3_Y_pos, runner_X_pos => runner_X_pos,runner_Y_pos =>runner_Y_pos, 
-                      reset => reset, collision_detected => collision);
+                      reset => reset, collision => collision);
 
 
    VSYNC <= VSYNC_temp;        

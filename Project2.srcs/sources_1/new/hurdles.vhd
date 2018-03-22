@@ -1,21 +1,15 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
+-- Company: GVSU
+-- Engineer: Jason Hunter
 -- 
 -- Create Date: 03/08/2018 03:17:44 PM
--- Design Name: 
--- Module Name: hurdles - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
+-- Design Name: Hurry Hurdles
+-- Module Name: Hurdles
+-- Project Name: EGR-426-Project-2
+-- Target Devices: Artix 7
+-- Description: This component displays and moves the hurdles across the screen. The
+-- component also includes keeping track of the round the player is in and how much
+-- hurdles the player jumped.
 ----------------------------------------------------------------------------------
 
 
@@ -25,20 +19,20 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 
 entity hurdles is
-    Port ( reset : in STD_LOGIC;
-           VS : in STD_LOGIC;
-           blank : in STD_LOGIC;
-           hcount : in STD_LOGIC_VECTOR (10 downto 0);
-           vcount : in STD_LOGIC_VECTOR (10 downto 0);
-           collision: in STD_LOGIC;
-           round : out STD_LOGIC_VECTOR(7 downto 0);
-           score : out STD_LOGIC_VECTOR(11 downto 0);
+    Port ( reset : in STD_LOGIC; --Reset button
+           VS : in STD_LOGIC; --Vertical sync
+           blank : in STD_LOGIC; --Blank
+           hcount : in STD_LOGIC_VECTOR (10 downto 0); --Horizontal count
+           vcount : in STD_LOGIC_VECTOR (10 downto 0); --Vertical count
+           collision: in STD_LOGIC; --Collision flag
+           round : out STD_LOGIC_VECTOR(7 downto 0); --Round
+           score : out STD_LOGIC_VECTOR(11 downto 0); --Score
            hurdle_X_pos,hurdle_Y_pos : out STD_LOGIC_VECTOR(10 downto 0);
-           hurdle2_X_pos,hurdle2_Y_pos : out STD_LOGIC_VECTOR(10 downto 0);
+           hurdle2_X_pos,hurdle2_Y_pos : out STD_LOGIC_VECTOR(10 downto 0); --X and Y coordinates of all the hurdles
            hurdle3_X_pos,hurdle3_Y_pos : out STD_LOGIC_VECTOR(10 downto 0);
-           Red : out STD_LOGIC_VECTOR (3 downto 0);
-           Green : out STD_LOGIC_VECTOR (3 downto 0);
-           Blue : out STD_LOGIC_VECTOR (3 downto 0));
+           Red : out STD_LOGIC_VECTOR (3 downto 0); -- Red value of hurdle
+           Green : out STD_LOGIC_VECTOR (3 downto 0); --Green value of hurdle
+           Blue : out STD_LOGIC_VECTOR (3 downto 0)); --Blue value of hurdle
 end hurdles;
 
 architecture Behavioral of hurdles is
@@ -62,6 +56,7 @@ begin
  begin
                              --Displaying First Hurdle
    ------------------------------------------------------------------------------
+  --If first hurdle is allowed to be displayed then print out hurdle
  if (flag = '1') then
  if((((hcount - Object_X_pos) <= 15) and ((Object_X_pos - hcount) >= 15) and -- Lower rectangle
     ((vcount - 35 - Object_Y_pos) <= 2) and ((Object_Y_pos - 35 - vcount) >= 2) and (blank = '0'))
@@ -78,6 +73,7 @@ begin
   end if;
                             --Displaying Second Hurdle
    ------------------------------------------------------------------------------ 
+  --If second hurdle is allowed to be displayed then print out hurdle
  if (flag2 = '1') then
   if((((hcount - Object_X_pos2) <= 15) and ((Object_X_pos2 - hcount) >= 15) and -- Lower rectangle
      ((vcount - 35 - Object_Y_pos) <= 2) and ((Object_Y_pos - 35 - vcount) >= 2) and (blank = '0'))
@@ -94,6 +90,7 @@ begin
    end if;
                             --Displaying Third Hurdle
    ------------------------------------------------------------------------------  
+  --If third hurdle is allowed to be displayed then print out hurdle
  if (flag3 = '1') then
    if((((hcount - Object_X_pos3) <= 15) and ((Object_X_pos3 - hcount) >= 15) and -- Lower rectangle
       ((vcount - 35 - Object_Y_pos) <= 2) and ((Object_Y_pos - 35 - vcount) >= 2) and (blank = '0'))
@@ -128,7 +125,7 @@ begin
      tempScore <= X"000";
      tempRound <= X"01";
      
-     
+  --If the runner collided onto a hurdle, stop the game by freezing the hurdles  
   elsif (collision = '1') then
     Object_X_pos <= Object_X_pos;
     Object_X_pos2 <= Object_X_pos2;
@@ -140,12 +137,12 @@ begin
   if (flag = '1') then
   if(Object_X_pos  > 20 and Object_X_pos > 200) then        -- Move from R -> L
       Object_X_pos <= Object_X_pos - speed;
-   elsif(Object_X_pos <= 200) then             -- Checkpoint 1       
+   elsif(Object_X_pos > 20 and Object_X_pos <= 200) then             -- Checkpoint 1; Spawn the second hurdle       
     Object_X_pos <= Object_X_pos - speed;
     flag2 <= '1'; 
   elsif(Object_X_pos <= 20) then             -- Reach extreme LEFT POSITION    
-       Object_X_pos <= Object_X_pos;    --Stop the hurdle and stop displaying it
        tempScore <= tempScore + 1;
+       Object_X_pos <= Object_X_pos;    --Stop the hurdle and stop displaying it     
        flag <= '0';   
     end if;
   end if;
@@ -154,12 +151,12 @@ begin
   if (flag2 = '1') then
   if(Object_X_pos2  > 20 and Object_X_pos2 > 200) then        -- Move from R -> L
       Object_X_pos2 <= Object_X_pos2 - speed;
-   elsif(Object_X_pos2 <= 200) then             -- Checkpoint 2  
+   elsif(Object_X_pos2 > 20 and Object_X_pos2 <= 200) then             -- Checkpoint 2; Spawn the third hurdle
    Object_X_pos2 <= Object_X_pos2 - speed;   
    flag3 <= '1';  
   elsif(Object_X_pos2 <= 20) then             -- Reach extreme LEFT POSITION
-      Object_X_pos2 <= Object_X_pos2;    --Stop the hurdle and stop displaying it
       tempScore <= tempScore + 1;
+      Object_X_pos2 <= Object_X_pos2;    --Stop the hurdle and stop displaying it
       flag2 <= '0';         
     end if;
   end if;
@@ -186,6 +183,8 @@ begin
   end if;
   end process;
 
+                    --Set all the output values
+---------------------------------------------------------------------------
 --OR all the hurdles together to have them display at the same time
 Red <= red1 or red2 or red3;
 Green <= green1 or green2 or green3;
@@ -198,4 +197,5 @@ hurdle2_X_pos <= Object_X_pos2;
 hurdle2_Y_pos <= Object_Y_pos;
 hurdle3_X_pos <= Object_X_pos3;
 hurdle3_Y_pos <= Object_Y_pos;
+
 end Behavioral;

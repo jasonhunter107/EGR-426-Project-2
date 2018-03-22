@@ -1,33 +1,26 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
+-- Company: GVSU
+-- Engineer: Jason Hunter
 -- 
 -- Create Date: 01/31/2016 04:30:49 PM
--- Design Name: 
--- Module Name: colorbars - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
+-- Design Name: Hurry Hurdles
+-- Module Name: staticBackground
+-- Project Name: EGR-426-Project-2
+-- Target Devices: Artix 7
+-- Description: This component creates the background of the game. The background 
+-- includes the sun, sky, ground, dirt, text, runner, and hurdles.
 ----------------------------------------------------------------------------------
 
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
-use IEEE.STD_LOGIC_ARITH.ALL;       -- For unsigned()
+use IEEE.STD_LOGIC_ARITH.ALL; 
 
 
 entity staticBackground is
-Port (hcount,vcount : in STD_LOGIC_VECTOR(10 downto 0); blank : in STD_LOGIC;
-      Red,Green,Blue : out STD_LOGIC_VECTOR(3 downto 0));
+Port (hcount,vcount : in STD_LOGIC_VECTOR(10 downto 0); blank : in STD_LOGIC; --hcount, vcount, and blank
+      Red,Green,Blue : out STD_LOGIC_VECTOR(3 downto 0)); --RGB values of the background
 end staticBackground;
 
 
@@ -35,9 +28,11 @@ architecture Behavioral of staticBackground is
 
 begin
 
+--No blue is used for the background
 Blue <= "0000"; 
-                        		    
-
+                      
+                      --Assign the Red values of the background  		    
+-----------------------------------------------------------------------------------
 Red <= "0100"   when (vcount >= 300 and vcount < 560 and blank='0') --dirt
 
                 else "1111" when  (vcount < 30 and blank='0') --top of sky
@@ -46,7 +41,9 @@ Red <= "0100"   when (vcount >= 300 and vcount < 560 and blank='0') --dirt
                 else "1100" when (vcount >= 280 and vcount < 300 and blank='0') --grass
                    
                 else "0000";	
-                
+                     
+                     --Assign the Green values of the background
+ ---------------------------------------------------------------------------------------------               
 Green <= "0011" when (vcount >= 280 and vcount < 300 and blank='0') --grass
                 else "0010" when (vcount >= 300 and vcount < 560 and blank='0') --dirt
                 
