@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date             : Wed Mar 21 23:35:29 2018
+| Date             : Thu Mar 22 02:07:57 2018
 | Host             : 25thBam running 64-bit major release  (build 9200)
 | Command          : report_power -file Game_Top_power_routed.rpt -pb Game_Top_power_summary_routed.pb -rpx Game_Top_power_routed.rpx
 | Design           : Game_Top
@@ -50,14 +50,14 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        5 |       --- |             --- |
-| Slice Logic    |     0.002 |      999 |       --- |             --- |
-|   LUT as Logic |     0.001 |      592 |     20800 |            2.85 |
+| Slice Logic    |     0.002 |     1002 |       --- |             --- |
+|   LUT as Logic |     0.001 |      598 |     20800 |            2.88 |
 |   CARRY4       |    <0.001 |       94 |      8150 |            1.15 |
-|   Register     |    <0.001 |      116 |     41600 |            0.28 |
+|   Register     |    <0.001 |      117 |     41600 |            0.28 |
 |   F7/F8 Muxes  |    <0.001 |        1 |     32600 |           <0.01 |
 |   BUFG         |    <0.001 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |       21 |       --- |             --- |
-| Signals        |     0.001 |      677 |       --- |             --- |
+| Signals        |     0.001 |      682 |       --- |             --- |
 | Block RAM      |    <0.001 |        2 |        50 |            4.00 |
 | MMCM           |     0.116 |        1 |         5 |           20.00 |
 | I/O            |    <0.001 |       18 |       106 |           16.98 |
@@ -156,7 +156,7 @@ Table of Contents
 |             valid.cstr                         |    <0.001 |
 |               ramloop[0].ram.r                 |    <0.001 |
 |                 prim_init.ram                  |    <0.001 |
-|   r1                                           |     0.001 |
+|   r1                                           |    <0.001 |
 |     rr                                         |    <0.001 |
 |       U0                                       |    <0.001 |
 |         inst_blk_mem_gen                       |    <0.001 |

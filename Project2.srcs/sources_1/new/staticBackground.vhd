@@ -8,7 +8,7 @@
 -- Project Name: EGR-426-Project-2
 -- Target Devices: Artix 7
 -- Description: This component creates the background of the game. The background 
--- includes the sun, sky, ground, dirt, text, runner, and hurdles.
+-- includes the sun, sky, ground, dirt and dirt.
 ----------------------------------------------------------------------------------
 
 

@@ -14,13 +14,13 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t-cpg236'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t-cpg236'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 20748 
+INFO: Helper process launched with PID 8052 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 321.523 ; gain = 81.617
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 322.078 ; gain = 82.148
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Game_Top' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Game_Top.vhd:24]
-INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-13404-25thBam/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'c1' of component 'clk_wiz_0' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Game_Top.vhd:153]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-13404-25thBam/realtime/clk_wiz_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-10996-25thBam/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'c1' of component 'clk_wiz_0' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Game_Top.vhd:153]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-10996-25thBam/realtime/clk_wiz_0_stub.vhdl:15]
 INFO: [Synth 8-3491] module 'vga_controller_640_60' declared at 'C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/vga_controller_640_60.vhd:75' bound to instance 'v1' of component 'vga_controller_640_60' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Game_Top.vhd:156]
 INFO: [Synth 8-638] synthesizing module 'vga_controller_640_60' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/vga_controller_640_60.vhd:88]
 INFO: [Synth 8-256] done synthesizing module 'vga_controller_640_60' (1#1) [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/vga_controller_640_60.vhd:88]
@@ -49,8 +49,8 @@ WARNING: [Synth 8-6014] Unused sequential element roundHundreds_reg was removed.
 INFO: [Synth 8-256] done synthesizing module 'char_driver' (3#1) [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/char_driver.vhd:30]
 INFO: [Synth 8-3491] module 'Char_Gen' declared at 'C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Char_Gen.vhd:20' bound to instance 'm1' of component 'Char_Gen' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Game_Top.vhd:165]
 INFO: [Synth 8-638] synthesizing module 'Char_Gen' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Char_Gen.vhd:31]
-INFO: [Synth 8-3491] module 'rom1kx8' declared at 'C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-13404-25thBam/realtime/rom1kx8_stub.vhdl:5' bound to instance 'my_rom' of component 'rom1kx8' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Char_Gen.vhd:54]
-INFO: [Synth 8-638] synthesizing module 'rom1kx8' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-13404-25thBam/realtime/rom1kx8_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'rom1kx8' declared at 'C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-10996-25thBam/realtime/rom1kx8_stub.vhdl:5' bound to instance 'my_rom' of component 'rom1kx8' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Char_Gen.vhd:54]
+INFO: [Synth 8-638] synthesizing module 'rom1kx8' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-10996-25thBam/realtime/rom1kx8_stub.vhdl:14]
 WARNING: [Synth 8-6014] Unused sequential element col3_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Char_Gen.vhd:68]
 WARNING: [Synth 8-6014] Unused sequential element Green_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Char_Gen.vhd:79]
 WARNING: [Synth 8-6014] Unused sequential element Blue_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Char_Gen.vhd:82]
@@ -75,13 +75,13 @@ INFO: [Synth 8-3491] module 'runner' declared at 'C:/Users/Jason/Desktop/EGR 426
 INFO: [Synth 8-638] synthesizing module 'runner' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/runner.vhd:32]
 WARNING: [Synth 8-5640] Port 'wea' is missing in component declaration [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/runner.vhd:48]
 WARNING: [Synth 8-5640] Port 'dina' is missing in component declaration [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/runner.vhd:48]
-INFO: [Synth 8-3491] module 'runner_rom' declared at 'C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-13404-25thBam/realtime/runner_rom_stub.vhdl:5' bound to instance 'rr' of component 'runner_rom' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/runner.vhd:70]
-INFO: [Synth 8-638] synthesizing module 'runner_rom' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-13404-25thBam/realtime/runner_rom_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'runner_rom' declared at 'C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-10996-25thBam/realtime/runner_rom_stub.vhdl:5' bound to instance 'rr' of component 'runner_rom' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/runner.vhd:70]
+INFO: [Synth 8-638] synthesizing module 'runner_rom' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-10996-25thBam/realtime/runner_rom_stub.vhdl:16]
 WARNING: [Synth 8-614] signal 'Runner_X_Pos' is read in the process but is not in the sensitivity list [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/runner.vhd:85]
 WARNING: [Synth 8-614] signal 'Runner_Y_Pos' is read in the process but is not in the sensitivity list [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/runner.vhd:85]
 WARNING: [Synth 8-614] signal 'display_flag' is read in the process but is not in the sensitivity list [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/runner.vhd:85]
 WARNING: [Synth 8-614] signal 'rom_data' is read in the process but is not in the sensitivity list [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/runner.vhd:85]
-WARNING: [Synth 8-6014] Unused sequential element in_air_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/runner.vhd:118]
+WARNING: [Synth 8-614] signal 'in_air' is read in the process but is not in the sensitivity list [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/runner.vhd:106]
 INFO: [Synth 8-256] done synthesizing module 'runner' (7#1) [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/runner.vhd:32]
 INFO: [Synth 8-3491] module 'Speed_Controller' declared at 'C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Speed_Controller.vhd:20' bound to instance 'sp1' of component 'Speed_Controller' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Game_Top.vhd:181]
 INFO: [Synth 8-638] synthesizing module 'Speed_Controller' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Speed_Controller.vhd:25]
@@ -122,7 +122,7 @@ WARNING: [Synth 8-3331] design char_driver has unconnected port vcount[1]
 WARNING: [Synth 8-3331] design char_driver has unconnected port vcount[0]
 WARNING: [Synth 8-3331] design char_driver has unconnected port reset
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 372.449 ; gain = 132.543
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 372.691 ; gain = 132.762
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -132,19 +132,19 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 372.449 ; gain = 132.543
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 372.691 ; gain = 132.762
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-13404-25thBam/dcp7/clk_wiz_0_in_context.xdc] for cell 'c1'
-Finished Parsing XDC File [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-13404-25thBam/dcp7/clk_wiz_0_in_context.xdc] for cell 'c1'
-Parsing XDC File [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-13404-25thBam/dcp9/runner_rom_in_context.xdc] for cell 'r1/rr'
-Finished Parsing XDC File [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-13404-25thBam/dcp9/runner_rom_in_context.xdc] for cell 'r1/rr'
-Parsing XDC File [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-13404-25thBam/dcp11/rom1kx8_in_context.xdc] for cell 'm1/my_rom'
-Finished Parsing XDC File [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-13404-25thBam/dcp11/rom1kx8_in_context.xdc] for cell 'm1/my_rom'
+Parsing XDC File [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-10996-25thBam/dcp7/clk_wiz_0_in_context.xdc] for cell 'c1'
+Finished Parsing XDC File [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-10996-25thBam/dcp7/clk_wiz_0_in_context.xdc] for cell 'c1'
+Parsing XDC File [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-10996-25thBam/dcp9/runner_rom_in_context.xdc] for cell 'r1/rr'
+Finished Parsing XDC File [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-10996-25thBam/dcp9/runner_rom_in_context.xdc] for cell 'r1/rr'
+Parsing XDC File [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-10996-25thBam/dcp11/rom1kx8_in_context.xdc] for cell 'm1/my_rom'
+Finished Parsing XDC File [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-10996-25thBam/dcp11/rom1kx8_in_context.xdc] for cell 'm1/my_rom'
 Parsing XDC File [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/constrs_1/new/vgatop_pins.xdc]
 Finished Parsing XDC File [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/constrs_1/new/vgatop_pins.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/constrs_1/new/vgatop_pins.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Game_Top_propImpl.xdc].
@@ -154,27 +154,27 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 699.145 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.004 . Memory (MB): peak = 701.195 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 699.145 ; gain = 459.238
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 701.195 ; gain = 461.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 699.145 ; gain = 459.238
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 701.195 ; gain = 461.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for clk_100MHz. (constraint file  {C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-13404-25thBam/dcp7/clk_wiz_0_in_context.xdc}, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_100MHz. (constraint file  {C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-13404-25thBam/dcp7/clk_wiz_0_in_context.xdc}, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for clk_100MHz. (constraint file  {C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-10996-25thBam/dcp7/clk_wiz_0_in_context.xdc}, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_100MHz. (constraint file  {C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/.Xil/Vivado-10996-25thBam/dcp7/clk_wiz_0_in_context.xdc}, line 4).
 Applied set_property DONT_TOUCH = true for c1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for m1/my_rom. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for r1/rr. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 699.145 ; gain = 459.238
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 701.195 ; gain = 461.266
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-6014] Unused sequential element hcounter_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/vga_controller_640_60.vhd:128]
 WARNING: [Synth 8-6014] Unused sequential element vcounter_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/vga_controller_640_60.vhd:129]
@@ -187,14 +187,14 @@ WARNING: [Synth 8-6014] Unused sequential element blue3_reg was removed.  [C:/Us
 WARNING: [Synth 8-6014] Unused sequential element tempScore_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:125]
 WARNING: [Synth 8-6014] Unused sequential element speed_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:121]
 WARNING: [Synth 8-6014] Unused sequential element tempRound_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:126]
-WARNING: [Synth 8-6014] Unused sequential element Runner_Y_Pos_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/runner.vhd:114]
+WARNING: [Synth 8-6014] Unused sequential element Runner_Y_Pos_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/runner.vhd:120]
 INFO: [Synth 8-5546] ROM "tempSpeed" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-327] inferring latch for variable 'red2_reg' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:82]
 WARNING: [Synth 8-327] inferring latch for variable 'red3_reg' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:99]
 WARNING: [Synth 8-327] inferring latch for variable 'red1_reg' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:65]
 WARNING: [Synth 8-327] inferring latch for variable 'tempCollision_reg' [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/Collision_Detection.vhd:45]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 699.145 ; gain = 459.238
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 701.195 ; gain = 461.266
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -216,7 +216,7 @@ Detailed RTL Component Info :
 	               11 Bit    Registers := 6     
 	                8 Bit    Registers := 1     
 	                3 Bit    Registers := 2     
-	                1 Bit    Registers := 9     
+	                1 Bit    Registers := 10    
 +---Muxes : 
 	   2 Input     11 Bit        Muxes := 7     
 	   2 Input      7 Bit        Muxes := 10    
@@ -225,7 +225,7 @@ Detailed RTL Component Info :
 	   4 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 7     
 	   5 Input      4 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 37    
+	   2 Input      1 Bit        Muxes := 38    
 	   4 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -283,11 +283,11 @@ Detailed RTL Component Info :
 	   3 Input     11 Bit       Adders := 4     
 +---Registers : 
 	               11 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
 +---Muxes : 
 	   2 Input      5 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 6     
 Module Speed_Controller 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -317,7 +317,7 @@ WARNING: [Synth 8-6014] Unused sequential element vcounter_reg was removed.  [C:
 WARNING: [Synth 8-6014] Unused sequential element speed_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:121]
 WARNING: [Synth 8-6014] Unused sequential element tempRound_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:126]
 WARNING: [Synth 8-6014] Unused sequential element tempScore_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/hurdles.vhd:125]
-WARNING: [Synth 8-6014] Unused sequential element Runner_Y_Pos_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/runner.vhd:114]
+WARNING: [Synth 8-6014] Unused sequential element Runner_Y_Pos_reg was removed.  [C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.srcs/sources_1/new/runner.vhd:120]
 WARNING: [Synth 8-3331] design char_driver has unconnected port hcount[10]
 WARNING: [Synth 8-3331] design char_driver has unconnected port hcount[2]
 WARNING: [Synth 8-3331] design char_driver has unconnected port hcount[1]
@@ -359,7 +359,7 @@ WARNING: [Synth 8-3332] Sequential element (speed_reg[29]) is unused and will be
 WARNING: [Synth 8-3332] Sequential element (speed_reg[30]) is unused and will be removed from module hurdles.
 WARNING: [Synth 8-3332] Sequential element (speed_reg[31]) is unused and will be removed from module hurdles.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 699.145 ; gain = 459.238
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 701.195 ; gain = 461.266
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -373,13 +373,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'c1/clk_out1' to pin 'c1/bbstub_clk_out1/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 699.145 ; gain = 459.238
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 705.305 ; gain = 465.375
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 708.500 ; gain = 468.594
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 717.328 ; gain = 477.398
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -391,7 +391,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 757.910 ; gain = 518.004
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 767.172 ; gain = 527.242
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -428,7 +428,7 @@ CRITICAL WARNING: [Synth 8-4442] BlackBox module \r1/rr  has unconnected pin din
 CRITICAL WARNING: [Synth 8-4442] BlackBox module \r1/rr  has unconnected pin dina[1]
 CRITICAL WARNING: [Synth 8-4442] BlackBox module \r1/rr  has unconnected pin dina[0]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 757.910 ; gain = 518.004
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 767.172 ; gain = 527.242
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -441,7 +441,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 757.910 ; gain = 518.004
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 767.172 ; gain = 527.242
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -453,25 +453,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 757.910 ; gain = 518.004
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 767.172 ; gain = 527.242
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 757.910 ; gain = 518.004
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 767.172 ; gain = 527.242
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 757.910 ; gain = 518.004
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 767.172 ; gain = 527.242
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 757.910 ; gain = 518.004
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 767.172 ; gain = 527.242
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -496,15 +496,15 @@ Report Cell Usage:
 |4     |BUFG            |     1|
 |5     |CARRY4          |    94|
 |6     |LUT1            |    50|
-|7     |LUT2            |   326|
-|8     |LUT3            |    44|
-|9     |LUT4            |   134|
-|10    |LUT5            |    74|
-|11    |LUT6            |   161|
+|7     |LUT2            |   331|
+|8     |LUT3            |    43|
+|9     |LUT4            |   132|
+|10    |LUT5            |    65|
+|11    |LUT6            |   171|
 |12    |MUXF7           |     1|
 |13    |FDCE            |    49|
-|14    |FDPE            |    18|
-|15    |FDRE            |    40|
+|14    |FDPE            |    20|
+|15    |FDRE            |    39|
 |16    |FDSE            |     5|
 |17    |LD              |     3|
 |18    |LDC             |     1|
@@ -516,19 +516,19 @@ Report Instance Areas:
 +------+---------+----------------------+------+
 |      |Instance |Module                |Cells |
 +------+---------+----------------------+------+
-|1     |top      |                      |  1040|
+|1     |top      |                      |  1044|
 |2     |  cl1    |Collision_Detection   |     5|
-|3     |  h1     |hurdles               |   507|
+|3     |  h1     |hurdles               |   503|
 |4     |  m1     |Char_Gen              |    19|
-|5     |  r1     |runner                |   160|
-|6     |  v1     |vga_controller_640_60 |   321|
+|5     |  r1     |runner                |   166|
+|6     |  v1     |vga_controller_640_60 |   323|
 +------+---------+----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 757.910 ; gain = 518.004
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 767.172 ; gain = 527.242
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 13 critical warnings and 53 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 757.910 ; gain = 191.309
-Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 757.910 ; gain = 518.004
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 767.172 ; gain = 198.738
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 767.172 ; gain = 527.242
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 100 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -541,7 +541,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 
 58 Infos, 121 Warnings, 13 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 757.910 ; gain = 525.277
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 767.172 ; gain = 534.527
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Jason/Desktop/EGR 426/Project2/EGR-426-Project-2/Project2.runs/synth_1/Game_Top.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 757.910 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Mar 21 23:34:28 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 767.172 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 22 02:06:56 2018...

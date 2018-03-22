@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Wed Mar 21 23:35:06 2018
+| Date         : Thu Mar 22 02:07:34 2018
 | Host         : 25thBam running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Game_Top_control_sets_placed.rpt
 | Design       : Game_Top
@@ -22,8 +22,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    16 |
-| Unused register locations in slices containing registers |    92 |
+| Number of unique control sets                            |    17 |
+| Unused register locations in slices containing registers |    99 |
 +----------------------------------------------------------+-------+
 
 
@@ -33,12 +33,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              14 |            9 |
-| No           | No                    | Yes                    |               3 |            3 |
-| No           | Yes                   | No                     |              13 |            6 |
+| No           | No                    | No                     |              13 |            7 |
+| No           | No                    | Yes                    |               5 |            5 |
+| No           | Yes                   | No                     |              13 |            5 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              64 |           22 |
-| Yes          | Yes                   | No                     |              22 |            7 |
+| Yes          | No                    | Yes                    |              64 |           20 |
+| Yes          | Yes                   | No                     |              22 |            6 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -48,29 +48,30 @@ Table of Contents
 +--------------------------------+------------------------------+-----------------------------+------------------+----------------+
 |          Clock Signal          |         Enable Signal        |       Set/Reset Signal      | Slice Load Count | Bel Load Count |
 +--------------------------------+------------------------------+-----------------------------+------------------+----------------+
-|  h1/flag2                      |                              |                             |                1 |              1 |
+|  c1/inst/clk_out1              |                              | v1/HS0                      |                1 |              1 |
+|  VSYNC_OBUF_BUFG               |                              |                             |                1 |              1 |
 |  h1/flag                       |                              |                             |                1 |              1 |
+|  h1/flag2                      |                              |                             |                1 |              1 |
 |  h1/flag3                      |                              |                             |                1 |              1 |
 |  cl1/tempCollision_reg_i_1_n_0 |                              | reset_IBUF                  |                1 |              1 |
-|  c1/inst/clk_out1              |                              | v1/HS0                      |                1 |              1 |
-|  VSYNC_OBUF_BUFG               |                              |                             |                1 |              2 |
+|  VSYNC_OBUF_BUFG               |                              | r1/Runner_Y_Pos215_out      |                2 |              2 |
 |  VSYNC_OBUF_BUFG               |                              | reset_IBUF                  |                3 |              3 |
-|  c1/inst/clk_out1              |                              |                             |                5 |              9 |
+|  c1/inst/clk_out1              |                              |                             |                3 |              9 |
+|  c1/inst/clk_out1              |                              | v1/hcounter[10]_i_1_n_0     |                3 |             11 |
+|  c1/inst/clk_out1              | v1/eqOp                      | v1/vcounter[10]_i_1_n_0     |                3 |             11 |
+|  VSYNC_OBUF_BUFG               | h1/Object_X_pos2[10]_i_1_n_0 | reset_IBUF                  |                4 |             11 |
 |  VSYNC_OBUF_BUFG               | h1/Object_X_pos30            | reset_IBUF                  |                3 |             11 |
-|  VSYNC_OBUF_BUFG               | h1/Object_X_pos[10]_i_1_n_0  | reset_IBUF                  |                4 |             11 |
-|  VSYNC_OBUF_BUFG               | r1/Runner_Y_Pos              | r1/Runner_Y_Pos[10]_i_1_n_0 |                3 |             11 |
-|  VSYNC_OBUF_BUFG               | h1/Object_X_pos2[10]_i_1_n_0 | reset_IBUF                  |                5 |             11 |
-|  c1/inst/clk_out1              |                              | v1/hcounter[10]_i_1_n_0     |                4 |             11 |
-|  c1/inst/clk_out1              | v1/vcounter[10]_i_2_n_0      | v1/vcounter[10]_i_1_n_0     |                4 |             11 |
+|  VSYNC_OBUF_BUFG               | h1/Object_X_pos[10]_i_1_n_0  | reset_IBUF                  |                2 |             11 |
+|  VSYNC_OBUF_BUFG               | r1/Runner_Y_Pos0             | r1/Runner_Y_Pos[10]_i_1_n_0 |                3 |             11 |
 |  VSYNC_OBUF_BUFG               | h1/tempScore0                | reset_IBUF                  |                3 |             12 |
-|  VSYNC_OBUF_BUFG               | cl1/sel                      | reset_IBUF                  |                7 |             19 |
+|  VSYNC_OBUF_BUFG               | cl1/sel                      | reset_IBUF                  |                8 |             19 |
 +--------------------------------+------------------------------+-----------------------------+------------------+----------------+
 
 
 +--------+-----------------------+
 | Fanout | Number of ControlSets |
 +--------+-----------------------+
-| 1      |                     5 |
+| 1      |                     6 |
 | 2      |                     1 |
 | 3      |                     1 |
 | 9      |                     1 |

@@ -103,23 +103,28 @@ end if;
 end process;
                             --Process for jumping
 ---------------------------------------------------------------------------
- process(VS) 
+ process(VS, btn_up) 
  begin
+ 
+    --Protect against pressing the jump button once the runner is already in the air
+    if (btn_up = '1' and in_air = '0') then
+    in_air <= '1';
+    jump <= '1';
+    
  --On rising edge of vertical sync
-  if(rising_edge(VS)) then
+  elsif(rising_edge(VS)) then
     --If user presses button or if he is in mid air
-    if ((btn_up = '1' or jump = '1' or falling = '1') and collision = '0') then
+    if ((in_air = '1' or jump = '1' or falling = '1') and collision = '0') then
     
     --If the runner is on the ground then jump up 100 pixels
-    if ((Runner_Y_Pos <= 217) and (Runner_Y_Pos > 117) and ((jump = '1') or (btn_up = '1'))) then
+    if ((Runner_Y_Pos <= 217) and (Runner_Y_Pos > 117) and jump = '1') then
     Runner_Y_Pos <= Runner_Y_Pos - 10;
     jump <= '1';
     falling <= '0';
-    in_air <= '1';
     
     --If runner reached the max height for jumping then fall down
     elsif (Runner_Y_Pos <= 117) then
-     Runner_Y_Pos <= Runner_Y_Pos + speed;
+    Runner_Y_Pos <= Runner_Y_Pos + speed;
     jump <= '0';
     falling <= '1';
     
@@ -134,6 +139,7 @@ end process;
     Runner_Y_Pos <= B"00011011001"; --217
     jump <= '0';
     falling <= '0';
+    in_air <= '0';
     end if;
     
     end if;
